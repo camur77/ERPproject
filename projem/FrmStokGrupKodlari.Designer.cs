@@ -71,6 +71,7 @@
             this.SbtnSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.SbtnSil.Size = new System.Drawing.Size(37, 36);
             this.SbtnSil.TabIndex = 5;
+            this.SbtnSil.Click += new System.EventHandler(this.SbtnSil_Click);
             // 
             // sbtnKaydet
             // 
@@ -81,6 +82,7 @@
             this.sbtnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnKaydet.Size = new System.Drawing.Size(37, 36);
             this.sbtnKaydet.TabIndex = 4;
+            this.sbtnKaydet.Click += new System.EventHandler(this.sbtnKaydet_Click);
             // 
             // labelControl1
             // 
@@ -98,6 +100,7 @@
             this.txtGrupKodu.Name = "txtGrupKodu";
             this.txtGrupKodu.Size = new System.Drawing.Size(134, 22);
             this.txtGrupKodu.TabIndex = 2;
+            this.txtGrupKodu.Leave += new System.EventHandler(this.txtGrupKodu_Leave);
             // 
             // labelControl2
             // 
@@ -124,7 +127,7 @@
             this.groupBox2.Size = new System.Drawing.Size(420, 527);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Stok Listesi";
+            this.groupBox2.Text = "Grup Kod Listesi";
             // 
             // gridControl1
             // 
@@ -138,6 +141,7 @@
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -145,6 +149,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
             // 
             // FrmStokGrupKodlari
             // 
@@ -157,6 +162,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStokGrupKodlari";
             this.Text = "Stok Grup Kodları";
+            this.Load += new System.EventHandler(this.FrmStokGrupKodlari_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrupKodu.Properties)).EndInit();

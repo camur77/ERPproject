@@ -59,7 +59,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(496, 319);
+            this.groupBox1.Size = new System.Drawing.Size(420, 319);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stok Kartı Bilgileri";
@@ -82,6 +82,7 @@
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Size = new System.Drawing.Size(172, 22);
             this.txtStokKodu.TabIndex = 2;
+            this.txtStokKodu.TextChanged += new System.EventHandler(this.txtStokKodu_TextChanged);
             // 
             // labelControl2
             // 
@@ -102,6 +103,7 @@
             this.TxtGrupKodu.Size = new System.Drawing.Size(128, 22);
             this.TxtGrupKodu.TabIndex = 4;
             this.TxtGrupKodu.EditValueChanged += new System.EventHandler(this.textEdit3_EditValueChanged);
+            this.TxtGrupKodu.TextChanged += new System.EventHandler(this.TxtGrupKodu_TextChanged);
             // 
             // txtStokAdi
             // 
@@ -110,6 +112,7 @@
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Size = new System.Drawing.Size(172, 22);
             this.txtStokAdi.TabIndex = 3;
+            this.txtStokAdi.TextChanged += new System.EventHandler(this.txtStokAdi_TextChanged);
             // 
             // labelControl3
             // 
@@ -125,7 +128,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(517, 24);
+            this.groupBox2.Location = new System.Drawing.Point(441, 24);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -153,18 +156,21 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // FrmStokListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1331, 395);
+            this.ClientSize = new System.Drawing.Size(1254, 364);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStokListesi";
             this.Text = "Stok Listesi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmStokListesi_FormClosed);
+            this.Load += new System.EventHandler(this.FrmStokListesi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();

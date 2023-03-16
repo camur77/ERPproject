@@ -38,6 +38,7 @@
             this.sbtnGrupKodListesi = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnStokListesi = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtGrupAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtFiyat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -45,15 +46,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.sbtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.txtGrupAdi = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrupKodu.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGrupAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKdvorani.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGrupAdi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -72,6 +72,7 @@
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Size = new System.Drawing.Size(125, 22);
             this.txtStokKodu.TabIndex = 2;
+            this.txtStokKodu.Leave += new System.EventHandler(this.txtStokKodu_Leave);
             // 
             // txtStokAdi
             // 
@@ -96,6 +97,8 @@
             this.txtGrupKodu.Name = "txtGrupKodu";
             this.txtGrupKodu.Size = new System.Drawing.Size(59, 22);
             this.txtGrupKodu.TabIndex = 5;
+            this.txtGrupKodu.EditValueChanged += new System.EventHandler(this.c);
+            this.txtGrupKodu.Leave += new System.EventHandler(this.txtGrupKodu_Leave);
             // 
             // labelControl3
             // 
@@ -110,7 +113,7 @@
             // 
             // sbtnGrupKodListesi
             // 
-            this.sbtnGrupKodListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.sbtnGrupKodListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnGrupKodListesi.ImageOptions.Image")));
             this.sbtnGrupKodListesi.Location = new System.Drawing.Point(233, 124);
             this.sbtnGrupKodListesi.Name = "sbtnGrupKodListesi";
             this.sbtnGrupKodListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -120,7 +123,7 @@
             // 
             // sbtnStokListesi
             // 
-            this.sbtnStokListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.sbtnStokListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnStokListesi.ImageOptions.Image")));
             this.sbtnStokListesi.Location = new System.Drawing.Point(300, 29);
             this.sbtnStokListesi.Name = "sbtnStokListesi";
             this.sbtnStokListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -145,6 +148,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Genel Bilgiler";
+            // 
+            // txtGrupAdi
+            // 
+            this.txtGrupAdi.Enabled = false;
+            this.txtGrupAdi.Location = new System.Drawing.Point(289, 137);
+            this.txtGrupAdi.Name = "txtGrupAdi";
+            this.txtGrupAdi.Size = new System.Drawing.Size(107, 22);
+            this.txtGrupAdi.TabIndex = 7;
             // 
             // labelControl4
             // 
@@ -196,30 +207,25 @@
             // 
             // sbtnKaydet
             // 
-            this.sbtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.sbtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnKaydet.ImageOptions.Image")));
             this.sbtnKaydet.Location = new System.Drawing.Point(350, 271);
             this.sbtnKaydet.Name = "sbtnKaydet";
             this.sbtnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnKaydet.Size = new System.Drawing.Size(107, 35);
             this.sbtnKaydet.TabIndex = 11;
             this.sbtnKaydet.Text = "Kaydet";
+            this.sbtnKaydet.Click += new System.EventHandler(this.sbtnKaydet_Click);
             // 
             // sbtnSil
             // 
-            this.sbtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.sbtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSil.ImageOptions.Image")));
             this.sbtnSil.Location = new System.Drawing.Point(350, 321);
             this.sbtnSil.Name = "sbtnSil";
             this.sbtnSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnSil.Size = new System.Drawing.Size(107, 35);
             this.sbtnSil.TabIndex = 12;
             this.sbtnSil.Text = "Sil";
-            // 
-            // txtGrupAdi
-            // 
-            this.txtGrupAdi.Location = new System.Drawing.Point(289, 137);
-            this.txtGrupAdi.Name = "txtGrupAdi";
-            this.txtGrupAdi.Size = new System.Drawing.Size(107, 22);
-            this.txtGrupAdi.TabIndex = 7;
+            this.sbtnSil.Click += new System.EventHandler(this.sbtnSil_Click);
             // 
             // FrmStokKayıtları
             // 
@@ -232,19 +238,22 @@
             this.Controls.Add(this.groupBox1);
             this.Cursor = System.Windows.Forms.Cursors.No;
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStokKayıtları";
             this.Text = "Stok Kartı Kayıtları";
+            this.Activated += new System.EventHandler(this.FrmStokKayıtları_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmStokKayıtları_FormClosed);
+            this.Load += new System.EventHandler(this.FrmStokKayıtları_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrupKodu.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGrupAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKdvorani.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGrupAdi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
