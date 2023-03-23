@@ -32,22 +32,22 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtIlce = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStokKodu = new DevExpress.XtraEditors.TextEdit();
+            this.txtMusteriKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtGrupKodu = new DevExpress.XtraEditors.TextEdit();
-            this.txtStokAdi = new DevExpress.XtraEditors.TextEdit();
+            this.txtIl = new DevExpress.XtraEditors.TextEdit();
+            this.txtMusteriAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtGrupKodu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIlce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriAdi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -69,6 +69,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // groupBox2
             // 
@@ -84,13 +85,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textEdit1);
+            this.groupBox1.Controls.Add(this.txtIlce);
             this.groupBox1.Controls.Add(this.labelControl4);
             this.groupBox1.Controls.Add(this.labelControl1);
-            this.groupBox1.Controls.Add(this.txtStokKodu);
+            this.groupBox1.Controls.Add(this.txtMusteriKodu);
             this.groupBox1.Controls.Add(this.labelControl2);
-            this.groupBox1.Controls.Add(this.TxtGrupKodu);
-            this.groupBox1.Controls.Add(this.txtStokAdi);
+            this.groupBox1.Controls.Add(this.txtIl);
+            this.groupBox1.Controls.Add(this.txtMusteriAdi);
             this.groupBox1.Controls.Add(this.labelControl3);
             this.groupBox1.Location = new System.Drawing.Point(14, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
@@ -101,13 +102,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Müşteri Bilgileri";
             // 
-            // textEdit1
+            // txtIlce
             // 
-            this.textEdit1.Location = new System.Drawing.Point(189, 262);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(6);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(176, 22);
-            this.textEdit1.TabIndex = 7;
+            this.txtIlce.Location = new System.Drawing.Point(189, 262);
+            this.txtIlce.Margin = new System.Windows.Forms.Padding(6);
+            this.txtIlce.Name = "txtIlce";
+            this.txtIlce.Size = new System.Drawing.Size(176, 22);
+            this.txtIlce.TabIndex = 7;
+            this.txtIlce.TextChanged += new System.EventHandler(this.txtIlce_TextChanged);
             // 
             // labelControl4
             // 
@@ -131,13 +133,14 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Müşteri Kodu";
             // 
-            // txtStokKodu
+            // txtMusteriKodu
             // 
-            this.txtStokKodu.Location = new System.Drawing.Point(189, 87);
-            this.txtStokKodu.Margin = new System.Windows.Forms.Padding(6);
-            this.txtStokKodu.Name = "txtStokKodu";
-            this.txtStokKodu.Size = new System.Drawing.Size(236, 22);
-            this.txtStokKodu.TabIndex = 2;
+            this.txtMusteriKodu.Location = new System.Drawing.Point(189, 87);
+            this.txtMusteriKodu.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMusteriKodu.Name = "txtMusteriKodu";
+            this.txtMusteriKodu.Size = new System.Drawing.Size(236, 22);
+            this.txtMusteriKodu.TabIndex = 2;
+            this.txtMusteriKodu.TextChanged += new System.EventHandler(this.txtMusteriKodu_TextChanged);
             // 
             // labelControl2
             // 
@@ -151,21 +154,23 @@
             this.labelControl2.Text = "Müşteri Adı";
             this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
-            // TxtGrupKodu
+            // txtIl
             // 
-            this.TxtGrupKodu.Location = new System.Drawing.Point(189, 203);
-            this.TxtGrupKodu.Margin = new System.Windows.Forms.Padding(6);
-            this.TxtGrupKodu.Name = "TxtGrupKodu";
-            this.TxtGrupKodu.Size = new System.Drawing.Size(176, 22);
-            this.TxtGrupKodu.TabIndex = 4;
+            this.txtIl.Location = new System.Drawing.Point(189, 203);
+            this.txtIl.Margin = new System.Windows.Forms.Padding(6);
+            this.txtIl.Name = "txtIl";
+            this.txtIl.Size = new System.Drawing.Size(176, 22);
+            this.txtIl.TabIndex = 4;
+            this.txtIl.TextChanged += new System.EventHandler(this.txtIl_TextChanged);
             // 
-            // txtStokAdi
+            // txtMusteriAdi
             // 
-            this.txtStokAdi.Location = new System.Drawing.Point(189, 144);
-            this.txtStokAdi.Margin = new System.Windows.Forms.Padding(6);
-            this.txtStokAdi.Name = "txtStokAdi";
-            this.txtStokAdi.Size = new System.Drawing.Size(236, 22);
-            this.txtStokAdi.TabIndex = 3;
+            this.txtMusteriAdi.Location = new System.Drawing.Point(189, 144);
+            this.txtMusteriAdi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMusteriAdi.Name = "txtMusteriAdi";
+            this.txtMusteriAdi.Size = new System.Drawing.Size(236, 22);
+            this.txtMusteriAdi.TabIndex = 3;
+            this.txtMusteriAdi.TextChanged += new System.EventHandler(this.txtMusteriAdi_TextChanged);
             // 
             // labelControl3
             // 
@@ -182,22 +187,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1349, 455);
+            this.ClientSize = new System.Drawing.Size(1343, 402);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMusteriListesi";
             this.Text = "Müşteri Listesi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMusteriListesi_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMusteriListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtGrupKodu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIlce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriAdi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,12 +216,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtStokKodu;
+        private DevExpress.XtraEditors.TextEdit txtMusteriKodu;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit TxtGrupKodu;
-        private DevExpress.XtraEditors.TextEdit txtStokAdi;
+        private DevExpress.XtraEditors.TextEdit txtIl;
+        private DevExpress.XtraEditors.TextEdit txtMusteriAdi;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtIlce;
         private DevExpress.XtraEditors.LabelControl labelControl4;
     }
 }
