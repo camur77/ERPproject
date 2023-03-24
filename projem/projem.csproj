@@ -74,6 +74,12 @@
     <Compile Include="FrmMusteriListesi.Designer.cs">
       <DependentUpon>FrmMusteriListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSiparisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSiparisler.Designer.cs">
+      <DependentUpon>FrmSiparisler.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStokGrupKodlari.cs">
       <SubType>Form</SubType>
     </Compile>

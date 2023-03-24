@@ -81,7 +81,7 @@
             this.groupBox2.Size = new System.Drawing.Size(853, 364);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Stok Listesi";
+            this.groupBox2.Text = "Müşteri Listesi";
             // 
             // groupBox1
             // 
