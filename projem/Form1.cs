@@ -32,5 +32,11 @@ namespace projem
             FrmMusteriKayitlari frm = new FrmMusteriKayitlari();
             frm.Show();
         }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmSiparisler frm = new FrmSiparisler();   
+            frm.Show();
+        }
     }
 }

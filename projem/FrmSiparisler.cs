@@ -16,5 +16,16 @@ namespace projem
         {
             InitializeComponent();
         }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbtnStokListesi_Click(object sender, EventArgs e)
+        {
+            FrmSiparisListesi frm = new FrmSiparisListesi();
+            frm.Show();
+        }
     }
 }

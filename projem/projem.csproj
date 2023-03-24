@@ -80,6 +80,12 @@
     <Compile Include="FrmSiparisler.Designer.cs">
       <DependentUpon>FrmSiparisler.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSiparisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSiparisListesi.Designer.cs">
+      <DependentUpon>FrmSiparisListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStokGrupKodlari.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMusteriListesi.resx">
       <DependentUpon>FrmMusteriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSiparisler.resx">
+      <DependentUpon>FrmSiparisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSiparisListesi.resx">
+      <DependentUpon>FrmSiparisListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStokGrupKodlari.resx">
       <DependentUpon>FrmStokGrupKodlari.cs</DependentUpon>
