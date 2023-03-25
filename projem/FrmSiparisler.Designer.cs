@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSiparisler));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sbtnSiparisTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtTeslimTarihi = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -48,6 +49,7 @@
             this.txtIl = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.sbtnUrunTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.txtKDV = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtMiktar = new DevExpress.XtraEditors.TextEdit();
@@ -70,8 +72,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtToplamTutar = new DevExpress.XtraEditors.TextEdit();
-            this.sbtnSiparisTemizle = new DevExpress.XtraEditors.SimpleButton();
-            this.sbtnUrunTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeslimTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeslimTarihi.Properties.CalendarTimeProperties)).BeginInit();
@@ -116,6 +117,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Genel Bilgiler";
+            // 
+            // sbtnSiparisTemizle
+            // 
+            this.sbtnSiparisTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSiparisTemizle.ImageOptions.Image")));
+            this.sbtnSiparisTemizle.Location = new System.Drawing.Point(136, 0);
+            this.sbtnSiparisTemizle.Name = "sbtnSiparisTemizle";
+            this.sbtnSiparisTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.sbtnSiparisTemizle.Size = new System.Drawing.Size(37, 35);
+            this.sbtnSiparisTemizle.TabIndex = 9;
             // 
             // labelControl14
             // 
@@ -170,6 +180,7 @@
             this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
             this.txtSiparisNumarasi.Size = new System.Drawing.Size(125, 22);
             this.txtSiparisNumarasi.TabIndex = 2;
+            this.txtSiparisNumarasi.Leave += new System.EventHandler(this.txtSiparisNumarasi_Leave);
             // 
             // sbtnGrupKodListesi
             // 
@@ -179,6 +190,7 @@
             this.sbtnGrupKodListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnGrupKodListesi.Size = new System.Drawing.Size(37, 35);
             this.sbtnGrupKodListesi.TabIndex = 6;
+            this.sbtnGrupKodListesi.Click += new System.EventHandler(this.sbtnGrupKodListesi_Click);
             // 
             // labelControl2
             // 
@@ -196,6 +208,7 @@
             this.txtMusteriKodu.Name = "txtMusteriKodu";
             this.txtMusteriKodu.Size = new System.Drawing.Size(125, 22);
             this.txtMusteriKodu.TabIndex = 5;
+            this.txtMusteriKodu.Leave += new System.EventHandler(this.txtMusteriKodu_Leave);
             // 
             // labelControl3
             // 
@@ -316,6 +329,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sipariş İçerik Bilgisi";
             // 
+            // sbtnUrunTemizle
+            // 
+            this.sbtnUrunTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnUrunTemizle.ImageOptions.Image")));
+            this.sbtnUrunTemizle.Location = new System.Drawing.Point(190, 0);
+            this.sbtnUrunTemizle.Name = "sbtnUrunTemizle";
+            this.sbtnUrunTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.sbtnUrunTemizle.Size = new System.Drawing.Size(37, 35);
+            this.sbtnUrunTemizle.TabIndex = 14;
+            // 
             // txtKDV
             // 
             this.txtKDV.EditValue = "";
@@ -370,13 +392,14 @@
             // 
             // sbtnSil
             // 
-            this.sbtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image1")));
+            this.sbtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSil.ImageOptions.Image")));
             this.sbtnSil.Location = new System.Drawing.Point(1011, 84);
             this.sbtnSil.Name = "sbtnSil";
             this.sbtnSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnSil.Size = new System.Drawing.Size(105, 35);
             this.sbtnSil.TabIndex = 7;
             this.sbtnSil.Text = "Sil";
+            this.sbtnSil.Click += new System.EventHandler(this.sbtnSil_Click);
             // 
             // labelControl7
             // 
@@ -396,6 +419,7 @@
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(37, 35);
             this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtStokKodu
             // 
@@ -403,16 +427,18 @@
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Size = new System.Drawing.Size(125, 22);
             this.txtStokKodu.TabIndex = 2;
+            this.txtStokKodu.Leave += new System.EventHandler(this.txtStokKodu_Leave);
             // 
             // sbtnKaydet
             // 
-            this.sbtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image1")));
+            this.sbtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnKaydet.ImageOptions.Image")));
             this.sbtnKaydet.Location = new System.Drawing.Point(1011, 29);
             this.sbtnKaydet.Name = "sbtnKaydet";
             this.sbtnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnKaydet.Size = new System.Drawing.Size(105, 35);
             this.sbtnKaydet.TabIndex = 6;
             this.sbtnKaydet.Text = "Kaydet";
+            this.sbtnKaydet.Click += new System.EventHandler(this.sbtnKaydet_Click);
             // 
             // labelControl8
             // 
@@ -460,13 +486,14 @@
             // 
             // sbtnSiparisSil
             // 
-            this.sbtnSiparisSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.sbtnSiparisSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSiparisSil.ImageOptions.Image")));
             this.sbtnSiparisSil.Location = new System.Drawing.Point(910, 626);
             this.sbtnSiparisSil.Name = "sbtnSiparisSil";
             this.sbtnSiparisSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnSiparisSil.Size = new System.Drawing.Size(242, 55);
             this.sbtnSiparisSil.TabIndex = 7;
             this.sbtnSiparisSil.Text = "Siparişi Sil";
+            this.sbtnSiparisSil.Click += new System.EventHandler(this.sbtnSiparisSil_Click);
             // 
             // groupBox4
             // 
@@ -499,6 +526,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // groupBox5
             // 
@@ -517,29 +545,23 @@
             this.txtToplamTutar.Size = new System.Drawing.Size(140, 22);
             this.txtToplamTutar.TabIndex = 6;
             // 
-            // sbtnSiparisTemizle
+            // simpleButton2
             // 
-            this.sbtnSiparisTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.sbtnSiparisTemizle.Location = new System.Drawing.Point(136, 0);
-            this.sbtnSiparisTemizle.Name = "sbtnSiparisTemizle";
-            this.sbtnSiparisTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.sbtnSiparisTemizle.Size = new System.Drawing.Size(37, 35);
-            this.sbtnSiparisTemizle.TabIndex = 9;
-            // 
-            // sbtnUrunTemizle
-            // 
-            this.sbtnUrunTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.sbtnUrunTemizle.Location = new System.Drawing.Point(190, 0);
-            this.sbtnUrunTemizle.Name = "sbtnUrunTemizle";
-            this.sbtnUrunTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.sbtnUrunTemizle.Size = new System.Drawing.Size(37, 35);
-            this.sbtnUrunTemizle.TabIndex = 14;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(641, 626);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton2.Size = new System.Drawing.Size(242, 55);
+            this.simpleButton2.TabIndex = 15;
+            this.simpleButton2.Text = "Siparişi Kaydet";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // FrmSiparisler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 693);
+            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.sbtnSiparisSil);
@@ -550,6 +572,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSiparisler";
             this.Text = "Sipariş Kaydı";
+            this.Activated += new System.EventHandler(this.FrmSiparisler_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSiparisler_FormClosed);
+            this.Load += new System.EventHandler(this.FrmSiparisler_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeslimTarihi.Properties.CalendarTimeProperties)).EndInit();
@@ -626,5 +651,6 @@
         private DevExpress.XtraEditors.TextEdit txtToplamTutar;
         private DevExpress.XtraEditors.SimpleButton sbtnSiparisTemizle;
         private DevExpress.XtraEditors.SimpleButton sbtnUrunTemizle;
+        public DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

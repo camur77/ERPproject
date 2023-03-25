@@ -73,13 +73,25 @@ namespace projem
             }
             else
             {
-
+                if(musterıkodu == "sipariskayit")
+                {
+                    musterıkodu = x["MUSTERI_KODU"].ToString();
+                    FrmSiparisler.siparisx = "musteri";
+                    this.Hide();
+                    FrmSiparisler frm = new FrmSiparisler();
+                    frm.Activate();
+                }
             }
         }
 
         private void FrmMusteriListesi_FormClosed(object sender, FormClosedEventArgs e)
         {
             musterıkodu = "";
+        }
+
+        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

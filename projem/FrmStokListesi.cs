@@ -70,9 +70,13 @@ namespace projem
                 FrmStokKayıtları frm = new FrmStokKayıtları();
                 frm.Activate();
             }
-            else
+            if(stokkodu == "sipariskayit")
             {
-
+                stokkodu = data["STOK_KODU"].ToString();
+                FrmSiparisler.siparisx = "stok";
+                this.Hide();    
+                FrmSiparisler frm = new FrmSiparisler();
+                frm.Activate();
             }
         }
 

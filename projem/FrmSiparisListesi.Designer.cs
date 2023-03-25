@@ -63,6 +63,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // Si
             // 
@@ -109,6 +110,7 @@
             this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
             this.txtSiparisNumarasi.Size = new System.Drawing.Size(236, 22);
             this.txtSiparisNumarasi.TabIndex = 2;
+            this.txtSiparisNumarasi.TextChanged += new System.EventHandler(this.txtSiparisNumarasi_TextChanged);
             // 
             // labelControl2
             // 
@@ -128,6 +130,7 @@
             this.txtMusteriAdi.Name = "txtMusteriAdi";
             this.txtMusteriAdi.Size = new System.Drawing.Size(236, 22);
             this.txtMusteriAdi.TabIndex = 3;
+            this.txtMusteriAdi.TextChanged += new System.EventHandler(this.txtMusteriAdi_TextChanged);
             // 
             // FrmSiparisListesi
             // 
@@ -137,9 +140,11 @@
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSiparisListesi";
             this.Text = "Sipariş Listesi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSiparisListesi_FormClosed);
+            this.Load += new System.EventHandler(this.FrmSiparisListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.Si.ResumeLayout(false);
