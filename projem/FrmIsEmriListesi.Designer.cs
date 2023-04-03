@@ -32,22 +32,22 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Si = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtIsEmriNumarasi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSiparisNumarasi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokAdi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtIsEmriNumarasi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSiparisNumarasi = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.Si.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIsEmriNumarasi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIsEmriNumarasi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -62,6 +62,7 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -101,44 +102,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İş Emri Bilgileri";
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(9, 42);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(152, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "İş Emri Numarası";
-            // 
-            // txtIsEmriNumarasi
-            // 
-            this.txtIsEmriNumarasi.Location = new System.Drawing.Point(186, 44);
-            this.txtIsEmriNumarasi.Margin = new System.Windows.Forms.Padding(6);
-            this.txtIsEmriNumarasi.Name = "txtIsEmriNumarasi";
-            this.txtIsEmriNumarasi.Size = new System.Drawing.Size(236, 22);
-            this.txtIsEmriNumarasi.TabIndex = 2;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(458, 42);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(149, 24);
-            this.labelControl2.TabIndex = 4;
-            this.labelControl2.Text = "Sipariş Numarası";
-            // 
-            // txtSiparisNumarasi
-            // 
-            this.txtSiparisNumarasi.Location = new System.Drawing.Point(619, 44);
-            this.txtSiparisNumarasi.Margin = new System.Windows.Forms.Padding(6);
-            this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
-            this.txtSiparisNumarasi.Size = new System.Drawing.Size(236, 22);
-            this.txtSiparisNumarasi.TabIndex = 3;
-            // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -157,6 +120,7 @@
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Size = new System.Drawing.Size(236, 22);
             this.txtStokKodu.TabIndex = 6;
+            this.txtStokKodu.TextChanged += new System.EventHandler(this.txtStokKodu_TextChanged);
             // 
             // labelControl4
             // 
@@ -176,6 +140,47 @@
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Size = new System.Drawing.Size(236, 22);
             this.txtStokAdi.TabIndex = 7;
+            this.txtStokAdi.TextChanged += new System.EventHandler(this.txtStokAdi_TextChanged);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(9, 42);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(152, 24);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "İş Emri Numarası";
+            // 
+            // txtIsEmriNumarasi
+            // 
+            this.txtIsEmriNumarasi.Location = new System.Drawing.Point(186, 44);
+            this.txtIsEmriNumarasi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtIsEmriNumarasi.Name = "txtIsEmriNumarasi";
+            this.txtIsEmriNumarasi.Size = new System.Drawing.Size(236, 22);
+            this.txtIsEmriNumarasi.TabIndex = 2;
+            this.txtIsEmriNumarasi.TextChanged += new System.EventHandler(this.txtIsEmriNumarasi_TextChanged);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(458, 42);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(149, 24);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "Sipariş Numarası";
+            // 
+            // txtSiparisNumarasi
+            // 
+            this.txtSiparisNumarasi.Location = new System.Drawing.Point(619, 44);
+            this.txtSiparisNumarasi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
+            this.txtSiparisNumarasi.Size = new System.Drawing.Size(236, 22);
+            this.txtSiparisNumarasi.TabIndex = 3;
+            this.txtSiparisNumarasi.TextChanged += new System.EventHandler(this.txtSiparisNumarasi_TextChanged);
             // 
             // FrmIsEmriListesi
             // 
@@ -185,18 +190,20 @@
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIsEmriListesi";
-            this.Text = "FrmIsEmriListesi";
+            this.Text = "İş Emri Listesi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIsEmriListesi_FormClosed);
+            this.Load += new System.EventHandler(this.FrmIsEmriListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.Si.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIsEmriNumarasi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIsEmriNumarasi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -78,6 +78,14 @@ namespace projem
                 FrmSiparisler frm = new FrmSiparisler();
                 frm.Activate();
             }
+            if(stokkodu == "isemri")
+            {
+                stokkodu = data["STOK_KODU"].ToString();
+                FrmIsEmri.isemrix = "stok";
+                this.Hide();
+                FrmIsEmri frm = new FrmIsEmri();
+                frm.Activate();
+            }
         }
 
         private void FrmStokListesi_FormClosed(object sender, FormClosedEventArgs e)

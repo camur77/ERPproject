@@ -118,6 +118,7 @@
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Size = new System.Drawing.Size(125, 22);
             this.txtStokKodu.TabIndex = 25;
+            this.txtStokKodu.Leave += new System.EventHandler(this.txtStokKodu_Leave);
             // 
             // groupBox4
             // 
@@ -161,6 +162,7 @@
             this.sbtnSil.Size = new System.Drawing.Size(105, 35);
             this.sbtnSil.TabIndex = 23;
             this.sbtnSil.Text = "Sil";
+            this.sbtnSil.Click += new System.EventHandler(this.sbtnSil_Click);
             // 
             // sbtnKaydet
             // 
@@ -171,6 +173,7 @@
             this.sbtnKaydet.Size = new System.Drawing.Size(105, 35);
             this.sbtnKaydet.TabIndex = 22;
             this.sbtnKaydet.Text = "Kaydet";
+            this.sbtnKaydet.Click += new System.EventHandler(this.sbtnKaydet_Click);
             // 
             // labelControl8
             // 
@@ -184,10 +187,12 @@
             // 
             // txtSiparisKalemID
             // 
+            this.txtSiparisKalemID.Enabled = false;
             this.txtSiparisKalemID.Location = new System.Drawing.Point(204, 207);
             this.txtSiparisKalemID.Name = "txtSiparisKalemID";
             this.txtSiparisKalemID.Size = new System.Drawing.Size(125, 22);
             this.txtSiparisKalemID.TabIndex = 21;
+            this.txtSiparisKalemID.EditValueChanged += new System.EventHandler(this.txtSiparisKalemID_EditValueChanged);
             // 
             // labelControl7
             // 
@@ -279,6 +284,7 @@
             // 
             // txtStokAdi
             // 
+            this.txtStokAdi.Enabled = false;
             this.txtStokAdi.Location = new System.Drawing.Point(553, 89);
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Size = new System.Drawing.Size(181, 22);
@@ -292,6 +298,7 @@
             this.sbtnSiparisTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnSiparisTemizle.Size = new System.Drawing.Size(37, 35);
             this.sbtnSiparisTemizle.TabIndex = 9;
+            this.sbtnSiparisTemizle.Click += new System.EventHandler(this.sbtnSiparisTemizle_Click);
             // 
             // labelControl14
             // 
@@ -346,6 +353,7 @@
             this.txtIsEmriNumarasi.Name = "txtIsEmriNumarasi";
             this.txtIsEmriNumarasi.Size = new System.Drawing.Size(125, 22);
             this.txtIsEmriNumarasi.TabIndex = 2;
+            this.txtIsEmriNumarasi.Leave += new System.EventHandler(this.txtIsEmriNumarasi_Leave);
             // 
             // sbtnStokListesi
             // 
@@ -355,6 +363,7 @@
             this.sbtnStokListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnStokListesi.Size = new System.Drawing.Size(37, 35);
             this.sbtnStokListesi.TabIndex = 6;
+            this.sbtnStokListesi.Click += new System.EventHandler(this.sbtnStokListesi_Click);
             // 
             // labelControl2
             // 
@@ -383,7 +392,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(755, 421);
+            this.groupBox2.Size = new System.Drawing.Size(755, 271);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İş Emri Listesi";
@@ -396,7 +405,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(747, 390);
+            this.gridControl1.Size = new System.Drawing.Size(747, 240);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -407,18 +416,21 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // FrmIsEmri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 792);
+            this.ClientSize = new System.Drawing.Size(781, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIsEmri";
             this.Text = "İş Emri Girişi";
+            this.Activated += new System.EventHandler(this.FrmIsEmri_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIsEmri_FormClosed);
             this.Load += new System.EventHandler(this.FrmIsEmri_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
