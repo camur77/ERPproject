@@ -38,5 +38,11 @@ namespace projem
             FrmSiparisler frm = new FrmSiparisler();   
             frm.Show();
         }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmIsEmri frmIsEmri = new FrmIsEmri();
+            frmIsEmri.Show();   
+        }
     }
 }
