@@ -43,7 +43,7 @@
             this.Si.Margin = new System.Windows.Forms.Padding(6);
             this.Si.Name = "Si";
             this.Si.Padding = new System.Windows.Forms.Padding(6);
-            this.Si.Size = new System.Drawing.Size(969, 429);
+            this.Si.Size = new System.Drawing.Size(756, 395);
             this.Si.TabIndex = 19;
             this.Si.TabStop = false;
             this.Si.Text = "Sipariş Listesi";
@@ -56,7 +56,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(957, 394);
+            this.gridControl1.Size = new System.Drawing.Size(744, 360);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 459);
+            this.ClientSize = new System.Drawing.Size(786, 425);
             this.Controls.Add(this.Si);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);

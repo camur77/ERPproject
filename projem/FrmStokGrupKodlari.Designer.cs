@@ -57,7 +57,7 @@
             this.groupBox1.Controls.Add(this.txtGrupAdi);
             this.groupBox1.Location = new System.Drawing.Point(11, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 149);
+            this.groupBox1.Size = new System.Drawing.Size(349, 149);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Grup Kodu Bilgileri";
@@ -124,7 +124,7 @@
             this.groupBox2.Controls.Add(this.gridControl1);
             this.groupBox2.Location = new System.Drawing.Point(11, 197);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 527);
+            this.groupBox2.Size = new System.Drawing.Size(349, 363);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grup Kod Listesi";
@@ -137,7 +137,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(414, 498);
+            this.gridControl1.Size = new System.Drawing.Size(343, 334);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 743);
+            this.ClientSize = new System.Drawing.Size(372, 569);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

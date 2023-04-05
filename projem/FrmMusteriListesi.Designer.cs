@@ -58,7 +58,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(841, 329);
+            this.gridControl1.Size = new System.Drawing.Size(777, 237);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -75,11 +75,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(481, 30);
+            this.groupBox2.Location = new System.Drawing.Point(447, 30);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(853, 364);
+            this.groupBox2.Size = new System.Drawing.Size(789, 272);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Müşteri Listesi";
@@ -98,14 +98,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(455, 364);
+            this.groupBox1.Size = new System.Drawing.Size(421, 201);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Müşteri Bilgileri";
             // 
             // txtIlce
             // 
-            this.txtIlce.Location = new System.Drawing.Point(189, 262);
+            this.txtIlce.Location = new System.Drawing.Point(166, 159);
             this.txtIlce.Margin = new System.Windows.Forms.Padding(6);
             this.txtIlce.Name = "txtIlce";
             this.txtIlce.Size = new System.Drawing.Size(176, 22);
@@ -116,7 +116,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(45, 258);
+            this.labelControl4.Location = new System.Drawing.Point(22, 155);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(32, 24);
@@ -127,7 +127,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(45, 85);
+            this.labelControl1.Location = new System.Drawing.Point(22, 47);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(116, 24);
@@ -136,7 +136,7 @@
             // 
             // txtMusteriKodu
             // 
-            this.txtMusteriKodu.Location = new System.Drawing.Point(189, 87);
+            this.txtMusteriKodu.Location = new System.Drawing.Point(166, 49);
             this.txtMusteriKodu.Margin = new System.Windows.Forms.Padding(6);
             this.txtMusteriKodu.Name = "txtMusteriKodu";
             this.txtMusteriKodu.Size = new System.Drawing.Size(236, 22);
@@ -147,7 +147,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(45, 140);
+            this.labelControl2.Location = new System.Drawing.Point(22, 83);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(99, 24);
@@ -157,7 +157,7 @@
             // 
             // txtIl
             // 
-            this.txtIl.Location = new System.Drawing.Point(189, 203);
+            this.txtIl.Location = new System.Drawing.Point(166, 123);
             this.txtIl.Margin = new System.Windows.Forms.Padding(6);
             this.txtIl.Name = "txtIl";
             this.txtIl.Size = new System.Drawing.Size(176, 22);
@@ -166,7 +166,7 @@
             // 
             // txtMusteriAdi
             // 
-            this.txtMusteriAdi.Location = new System.Drawing.Point(189, 144);
+            this.txtMusteriAdi.Location = new System.Drawing.Point(166, 87);
             this.txtMusteriAdi.Margin = new System.Windows.Forms.Padding(6);
             this.txtMusteriAdi.Name = "txtMusteriAdi";
             this.txtMusteriAdi.Size = new System.Drawing.Size(236, 22);
@@ -177,7 +177,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(45, 199);
+            this.labelControl3.Location = new System.Drawing.Point(22, 119);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(12, 24);
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1343, 402);
+            this.ClientSize = new System.Drawing.Size(1251, 317);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

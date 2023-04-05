@@ -58,7 +58,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(877, 329);
+            this.gridControl1.Size = new System.Drawing.Size(814, 299);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -78,7 +78,7 @@
             this.Si.Margin = new System.Windows.Forms.Padding(6);
             this.Si.Name = "Si";
             this.Si.Padding = new System.Windows.Forms.Padding(6);
-            this.Si.Size = new System.Drawing.Size(889, 364);
+            this.Si.Size = new System.Drawing.Size(826, 334);
             this.Si.TabIndex = 18;
             this.Si.TabStop = false;
             this.Si.Text = "İş Emri Listesi";
@@ -97,7 +97,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(889, 145);
+            this.groupBox1.Size = new System.Drawing.Size(826, 145);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İş Emri Bilgileri";
@@ -118,7 +118,7 @@
             this.txtStokKodu.Location = new System.Drawing.Point(186, 96);
             this.txtStokKodu.Margin = new System.Windows.Forms.Padding(6);
             this.txtStokKodu.Name = "txtStokKodu";
-            this.txtStokKodu.Size = new System.Drawing.Size(236, 22);
+            this.txtStokKodu.Size = new System.Drawing.Size(176, 22);
             this.txtStokKodu.TabIndex = 6;
             this.txtStokKodu.TextChanged += new System.EventHandler(this.txtStokKodu_TextChanged);
             // 
@@ -126,7 +126,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(458, 94);
+            this.labelControl4.Location = new System.Drawing.Point(394, 94);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(73, 24);
@@ -135,7 +135,7 @@
             // 
             // txtStokAdi
             // 
-            this.txtStokAdi.Location = new System.Drawing.Point(619, 96);
+            this.txtStokAdi.Location = new System.Drawing.Point(555, 96);
             this.txtStokAdi.Margin = new System.Windows.Forms.Padding(6);
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Size = new System.Drawing.Size(236, 22);
@@ -158,7 +158,7 @@
             this.txtIsEmriNumarasi.Location = new System.Drawing.Point(186, 44);
             this.txtIsEmriNumarasi.Margin = new System.Windows.Forms.Padding(6);
             this.txtIsEmriNumarasi.Name = "txtIsEmriNumarasi";
-            this.txtIsEmriNumarasi.Size = new System.Drawing.Size(236, 22);
+            this.txtIsEmriNumarasi.Size = new System.Drawing.Size(176, 22);
             this.txtIsEmriNumarasi.TabIndex = 2;
             this.txtIsEmriNumarasi.TextChanged += new System.EventHandler(this.txtIsEmriNumarasi_TextChanged);
             // 
@@ -166,7 +166,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(458, 42);
+            this.labelControl2.Location = new System.Drawing.Point(394, 42);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(149, 24);
@@ -175,7 +175,7 @@
             // 
             // txtSiparisNumarasi
             // 
-            this.txtSiparisNumarasi.Location = new System.Drawing.Point(619, 44);
+            this.txtSiparisNumarasi.Location = new System.Drawing.Point(555, 44);
             this.txtSiparisNumarasi.Margin = new System.Windows.Forms.Padding(6);
             this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
             this.txtSiparisNumarasi.Size = new System.Drawing.Size(236, 22);
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 544);
+            this.ClientSize = new System.Drawing.Size(855, 519);
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
