@@ -44,5 +44,11 @@ namespace projem
             FrmIsEmri frmIsEmri = new FrmIsEmri();
             frmIsEmri.Show();   
         }
+
+        private void z_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUretimSonuKayitlari frm = new FrmUretimSonuKayitlari();
+            frm.Show();
+        }
     }
 }
