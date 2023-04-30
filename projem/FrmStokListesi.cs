@@ -86,6 +86,14 @@ namespace projem
                 FrmIsEmri frm = new FrmIsEmri();
                 frm.Activate();
             }
+            if(stokkodu == "stokhareket")
+            {
+                stokkodu = data["STOK_KODU"].ToString();
+                FrmStokHareketleri.stokhareketx = "stok";
+                this.Hide();
+                FrmStokHareketleri frm = new FrmStokHareketleri();
+                frm.Activate();
+            }
         }
 
         private void FrmStokListesi_FormClosed(object sender, FormClosedEventArgs e)

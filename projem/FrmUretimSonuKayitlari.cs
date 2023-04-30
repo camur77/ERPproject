@@ -122,14 +122,14 @@ namespace projem
         void stokhareketkaydigirisi()
         {
             conn.Open();
-            SqlCommand sorgu1 = new SqlCommand("", conn);
+            SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_STOK_HAREKETLERI (URETIMSONUKAYDI_NUMARASI,ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,G_MIKTAR,C_MIKTAR,MUSTERI_ADI,ACIKLAMA) VALUES ('"+txtFisNo.Text+"','"+txtIsEmriNumarasi.Text+"','"+txtStokKodu.Text+"','"+txtStokAdi.Text+"','"+txtMiktar.Text.Replace(',','.')+"','0','"+txtMusteriAdi.Text+"','ÜRETİM')",conn);
             sorgu1.ExecuteNonQuery();
             conn.Close();
         }
         void stokhareketkaydisilme()
         {
             conn.Open();
-            SqlCommand sorgu1 = new SqlCommand("", conn);
+            SqlCommand sorgu1 = new SqlCommand(" DELETE TBL_STOK_HAREKETLERI WHERE URETIMSONUKAYDI_NUMARASI = '"+txtFisNo.Text+"' ", conn);
             sorgu1.ExecuteNonQuery();
             conn.Close();
         }
@@ -193,7 +193,8 @@ namespace projem
         {
             if(txtFisNo.Text == "" || txtIsEmriNumarasi.Text == "")
             {
-                temizle();
+                MessageBox.Show("Lütfen Gerekli Olan Bilgileri Doldurunuz.");
+                //temizle();
             }
             else
             {
@@ -206,7 +207,7 @@ namespace projem
                 {
                     stogusevkehazirlama();
                     isemrinikapatma();
-                    //stokhareketkaydigirisi();
+                    stokhareketkaydigirisi();
                     conn.Open();
                     SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_URETIMSONUKAYITLARI (URETIMSONUKAYDI_NUMARASI,ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,MIKTAR,SIPARIS_NUMARASI,SIPKALEM_ID,MUSTERI_KODU,MUSTERI_ADI) VALUES ('"+txtFisNo.Text+"','"+txtIsEmriNumarasi.Text+"','"+txtStokKodu.Text+"','"+txtStokAdi.Text+"','"+txtMiktar.Text.Replace(',','.')+"','"+txtSiparisNumarasi.Text+"','"+txtKalemId.Text+"','"+txtMusteriKodu.Text+"','"+txtMusteriAdi.Text+"')",conn);
                     sorgu1.ExecuteNonQuery();
@@ -231,7 +232,7 @@ namespace projem
                 {
                     stoguuretimealma();
                     isemriniacma();
-                    //stokhareketkaydisilme();
+                    stokhareketkaydisilme();
                     conn.Open();
                     SqlCommand sorgu1 = new SqlCommand("DELETE TBL_URETIMSONUKAYITLARI WHERE URETIMSONUKAYDI_NUMARASI = '"+txtFisNo.Text+"'", conn);
                     sorgu1.ExecuteNonQuery();

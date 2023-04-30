@@ -50,5 +50,17 @@ namespace projem
             FrmUretimSonuKayitlari frm = new FrmUretimSonuKayitlari();
             frm.Show();
         }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmStokHareketleri frm = new FrmStokHareketleri();
+            frm.Show();
+        }
+
+        private void St_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmStokHareketleri frm = new FrmStokHareketleri();
+            frm.Show();
+        }
     }
 }
