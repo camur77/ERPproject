@@ -103,7 +103,8 @@ namespace projem
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
-            string tur = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "AÇIKLAMA"));
+            DataGridView dg = sender as DataGridView;
+            string tur = Convert.ToString(gridView1.GetRowCellValue(e.RowHandle, "AÇIKLAMA"));
             if(tur == "ÜRETİM")
             {
                 e.Appearance.BackColor = Color.Green;
@@ -112,6 +113,7 @@ namespace projem
             {
                 e.Appearance.BackColor = Color.Red;
             }
+            
         }
     }
 }

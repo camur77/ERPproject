@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtFisNo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtİsEmriNumarasi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSiparisNo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMüsteriAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokAdi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSiparisNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMüsteriAdi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtFisNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtİsEmriNumarasi = new DevExpress.XtraEditors.TextEdit();
             this.Si = new System.Windows.Forms.GroupBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFisNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtİsEmriNumarasi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMüsteriAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMüsteriAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFisNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtİsEmriNumarasi.Properties)).BeginInit();
             this.Si.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -77,41 +77,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üretim Sonu Kaydı Bilgileri";
             // 
-            // labelControl1
+            // labelControl5
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(24, 44);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(255, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Üretim Sonu Kaydı Numarası";
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(761, 44);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(90, 24);
+            this.labelControl5.TabIndex = 9;
+            this.labelControl5.Text = "Stok Kodu";
             // 
-            // txtFisNo
+            // txtStokKodu
             // 
-            this.txtFisNo.Location = new System.Drawing.Point(301, 41);
-            this.txtFisNo.Name = "txtFisNo";
-            this.txtFisNo.Size = new System.Drawing.Size(125, 22);
-            this.txtFisNo.TabIndex = 2;
-            this.txtFisNo.TextChanged += new System.EventHandler(this.txtFisNo_TextChanged);
+            this.txtStokKodu.Location = new System.Drawing.Point(880, 46);
+            this.txtStokKodu.Name = "txtStokKodu";
+            this.txtStokKodu.Size = new System.Drawing.Size(125, 22);
+            this.txtStokKodu.TabIndex = 10;
+            this.txtStokKodu.TextChanged += new System.EventHandler(this.txtStokKodu_TextChanged);
             // 
-            // labelControl2
+            // labelControl6
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(24, 87);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(152, 24);
-            this.labelControl2.TabIndex = 4;
-            this.labelControl2.Text = "İş Emri Numarası";
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(761, 87);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(73, 24);
+            this.labelControl6.TabIndex = 11;
+            this.labelControl6.Text = "Stok Adı";
             // 
-            // txtİsEmriNumarasi
+            // txtStokAdi
             // 
-            this.txtİsEmriNumarasi.Location = new System.Drawing.Point(301, 91);
-            this.txtİsEmriNumarasi.Name = "txtİsEmriNumarasi";
-            this.txtİsEmriNumarasi.Size = new System.Drawing.Size(125, 22);
-            this.txtİsEmriNumarasi.TabIndex = 4;
-            this.txtİsEmriNumarasi.TextChanged += new System.EventHandler(this.txtİsEmriNumarasi_TextChanged);
+            this.txtStokAdi.Location = new System.Drawing.Point(880, 89);
+            this.txtStokAdi.Name = "txtStokAdi";
+            this.txtStokAdi.Size = new System.Drawing.Size(125, 22);
+            this.txtStokAdi.TabIndex = 12;
+            this.txtStokAdi.TextChanged += new System.EventHandler(this.txtStokAdi_TextChanged);
             // 
             // labelControl3
             // 
@@ -149,41 +149,41 @@
             this.txtMüsteriAdi.TabIndex = 8;
             this.txtMüsteriAdi.TextChanged += new System.EventHandler(this.txtMüsteriAdi_TextChanged);
             // 
-            // labelControl5
+            // labelControl1
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(761, 44);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(90, 24);
-            this.labelControl5.TabIndex = 9;
-            this.labelControl5.Text = "Stok Kodu";
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(24, 44);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(255, 24);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Üretim Sonu Kaydı Numarası";
             // 
-            // txtStokKodu
+            // txtFisNo
             // 
-            this.txtStokKodu.Location = new System.Drawing.Point(880, 46);
-            this.txtStokKodu.Name = "txtStokKodu";
-            this.txtStokKodu.Size = new System.Drawing.Size(125, 22);
-            this.txtStokKodu.TabIndex = 10;
-            this.txtStokKodu.TextChanged += new System.EventHandler(this.txtStokKodu_TextChanged);
+            this.txtFisNo.Location = new System.Drawing.Point(301, 41);
+            this.txtFisNo.Name = "txtFisNo";
+            this.txtFisNo.Size = new System.Drawing.Size(125, 22);
+            this.txtFisNo.TabIndex = 2;
+            this.txtFisNo.TextChanged += new System.EventHandler(this.txtFisNo_TextChanged);
             // 
-            // labelControl6
+            // labelControl2
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(761, 87);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(73, 24);
-            this.labelControl6.TabIndex = 11;
-            this.labelControl6.Text = "Stok Adı";
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(24, 87);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(152, 24);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "İş Emri Numarası";
             // 
-            // txtStokAdi
+            // txtİsEmriNumarasi
             // 
-            this.txtStokAdi.Location = new System.Drawing.Point(880, 89);
-            this.txtStokAdi.Name = "txtStokAdi";
-            this.txtStokAdi.Size = new System.Drawing.Size(125, 22);
-            this.txtStokAdi.TabIndex = 12;
-            this.txtStokAdi.TextChanged += new System.EventHandler(this.txtStokAdi_TextChanged);
+            this.txtİsEmriNumarasi.Location = new System.Drawing.Point(301, 91);
+            this.txtİsEmriNumarasi.Name = "txtİsEmriNumarasi";
+            this.txtİsEmriNumarasi.Size = new System.Drawing.Size(125, 22);
+            this.txtİsEmriNumarasi.TabIndex = 4;
+            this.txtİsEmriNumarasi.TextChanged += new System.EventHandler(this.txtİsEmriNumarasi_TextChanged);
             // 
             // Si
             // 
@@ -227,16 +227,16 @@
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmUretimSonuKayitListesi";
-            this.Text = "FrmUretimSonuKayitListesi";
+            this.Text = "Üretim Sonu Kayıt Listesi";
             this.Load += new System.EventHandler(this.FrmUretimSonuKayitListesi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFisNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtİsEmriNumarasi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMüsteriAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMüsteriAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFisNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtİsEmriNumarasi.Properties)).EndInit();
             this.Si.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

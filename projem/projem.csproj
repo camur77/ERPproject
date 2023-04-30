@@ -62,6 +62,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGenelRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenelRapor.Designer.cs">
+      <DependentUpon>FrmGenelRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIsEmri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     <Compile Include="FrmSiparisListesi.Designer.cs">
       <DependentUpon>FrmSiparisListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSiparisSevk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSiparisSevk.Designer.cs">
+      <DependentUpon>FrmSiparisSevk.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStokGrupKodlari.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenelRapor.resx">
+      <DependentUpon>FrmGenelRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIsEmri.resx">
       <DependentUpon>FrmIsEmri.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSiparisListesi.resx">
       <DependentUpon>FrmSiparisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSiparisSevk.resx">
+      <DependentUpon>FrmSiparisSevk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStokGrupKodlari.resx">
       <DependentUpon>FrmStokGrupKodlari.cs</DependentUpon>

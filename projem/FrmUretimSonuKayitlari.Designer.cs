@@ -78,7 +78,7 @@
             this.groupBox2.Controls.Add(this.txtIsEmriNumarasi);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(532, 145);
+            this.groupBox2.Size = new System.Drawing.Size(622, 138);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Üretim Sonu Kaydı Bilgileri";
@@ -86,7 +86,7 @@
             // sbtnSiparisTemizle
             // 
             this.sbtnSiparisTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSiparisTemizle.ImageOptions.Image")));
-            this.sbtnSiparisTemizle.Location = new System.Drawing.Point(173, 9);
+            this.sbtnSiparisTemizle.Location = new System.Drawing.Point(6, 35);
             this.sbtnSiparisTemizle.Name = "sbtnSiparisTemizle";
             this.sbtnSiparisTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnSiparisTemizle.Size = new System.Drawing.Size(37, 30);
@@ -96,7 +96,7 @@
             // sbtnİsEmriListesi
             // 
             this.sbtnİsEmriListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnİsEmriListesi.ImageOptions.Image")));
-            this.sbtnİsEmriListesi.Location = new System.Drawing.Point(476, 87);
+            this.sbtnİsEmriListesi.Location = new System.Drawing.Point(518, 83);
             this.sbtnİsEmriListesi.Name = "sbtnİsEmriListesi";
             this.sbtnİsEmriListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnİsEmriListesi.Size = new System.Drawing.Size(37, 35);
@@ -106,7 +106,7 @@
             // sbtnFisListesi
             // 
             this.sbtnFisListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnFisListesi.ImageOptions.Image")));
-            this.sbtnFisListesi.Location = new System.Drawing.Point(476, 42);
+            this.sbtnFisListesi.Location = new System.Drawing.Point(518, 38);
             this.sbtnFisListesi.Name = "sbtnFisListesi";
             this.sbtnFisListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnFisListesi.Size = new System.Drawing.Size(37, 35);
@@ -117,7 +117,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(24, 45);
+            this.labelControl4.Location = new System.Drawing.Point(66, 41);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(255, 24);
             this.labelControl4.TabIndex = 0;
@@ -125,7 +125,7 @@
             // 
             // txtFisNo
             // 
-            this.txtFisNo.Location = new System.Drawing.Point(313, 47);
+            this.txtFisNo.Location = new System.Drawing.Point(355, 43);
             this.txtFisNo.Name = "txtFisNo";
             this.txtFisNo.Size = new System.Drawing.Size(148, 22);
             this.txtFisNo.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(24, 87);
+            this.labelControl5.Location = new System.Drawing.Point(66, 83);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(152, 24);
             this.labelControl5.TabIndex = 4;
@@ -143,7 +143,7 @@
             // 
             // txtIsEmriNumarasi
             // 
-            this.txtIsEmriNumarasi.Location = new System.Drawing.Point(313, 91);
+            this.txtIsEmriNumarasi.Location = new System.Drawing.Point(355, 87);
             this.txtIsEmriNumarasi.Name = "txtIsEmriNumarasi";
             this.txtIsEmriNumarasi.Size = new System.Drawing.Size(148, 22);
             this.txtIsEmriNumarasi.TabIndex = 4;
@@ -165,9 +165,9 @@
             this.groupBox1.Controls.Add(this.txtSiparisNumarasi);
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Controls.Add(this.txtStokKodu);
-            this.groupBox1.Location = new System.Drawing.Point(36, 174);
+            this.groupBox1.Location = new System.Drawing.Point(78, 166);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 367);
+            this.groupBox1.Size = new System.Drawing.Size(466, 352);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İş Emri Detay Bilgileri";
@@ -294,10 +294,10 @@
             // btnKaydet
             // 
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(123, 565);
+            this.btnKaydet.Location = new System.Drawing.Point(90, 560);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKaydet.Size = new System.Drawing.Size(99, 35);
+            this.btnKaydet.Size = new System.Drawing.Size(162, 35);
             this.btnKaydet.TabIndex = 10;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -305,10 +305,10 @@
             // btnSil
             // 
             this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.Location = new System.Drawing.Point(337, 565);
+            this.btnSil.Location = new System.Drawing.Point(367, 560);
             this.btnSil.Name = "btnSil";
             this.btnSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnSil.Size = new System.Drawing.Size(96, 35);
+            this.btnSil.Size = new System.Drawing.Size(165, 35);
             this.btnSil.TabIndex = 9;
             this.btnSil.Text = "SİL";
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -317,13 +317,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 628);
+            this.ClientSize = new System.Drawing.Size(646, 628);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmUretimSonuKayitlari";
-            this.Text = "FrmUretimSonuKayitlari";
+            this.Text = "Üretim Sonu Kayıtları";
             this.Activated += new System.EventHandler(this.FrmUretimSonuKayitlari_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmUretimSonuKayitlari_FormClosed);
             this.Load += new System.EventHandler(this.FrmUretimSonuKayitlari_Load);

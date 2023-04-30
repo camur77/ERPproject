@@ -62,5 +62,18 @@ namespace projem
             FrmStokHareketleri frm = new FrmStokHareketleri();
             frm.Show();
         }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmSiparisSevk frmSiparisSevk = new FrmSiparisSevk();
+            frmSiparisSevk.Show();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmGenelRapor frmGenelRapor = new FrmGenelRapor();
+            frmGenelRapor.MdiParent = this;
+            frmGenelRapor.Show();
+        }
     }
 }
