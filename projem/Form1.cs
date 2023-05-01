@@ -75,5 +75,12 @@ namespace projem
             frmGenelRapor.MdiParent = this;
             frmGenelRapor.Show();
         }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUretilecekIsEmirleri frm = new FrmUretilecekIsEmirleri();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
