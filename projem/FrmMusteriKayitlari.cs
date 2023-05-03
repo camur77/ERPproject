@@ -246,5 +246,10 @@ namespace projem
         {
             FrmMusteriListesi.musterıkodu = "";
         }
+
+        private void comboil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

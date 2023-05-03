@@ -30,91 +30,52 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenelRapor));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.adfasdf = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlstokkontrol = new DevExpress.XtraGrid.GridControl();
             this.gridViewstokkontrol = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControsevkehazir = new DevExpress.XtraGrid.GridControl();
-            this.gridViewsevkehazir = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControlmustericiro = new DevExpress.XtraGrid.GridControl();
-            this.gridViewmustericiro = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControlurunsatis = new DevExpress.XtraGrid.GridControl();
-            this.gridViewurunsatis = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlişemrigereken = new DevExpress.XtraGrid.GridControl();
             this.gridViewişemrigereken = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.adfasdf = new DevExpress.XtraEditors.GroupControl();
+            this.gridControsevkehazir = new DevExpress.XtraGrid.GridControl();
+            this.gridViewsevkehazir = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.gridControlurunsatis = new DevExpress.XtraGrid.GridControl();
+            this.gridViewurunsatis = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.gridControlmustericiro = new DevExpress.XtraGrid.GridControl();
+            this.gridViewmustericiro = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adfasdf)).BeginInit();
-            this.adfasdf.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
-            this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlstokkontrol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewstokkontrol)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControsevkehazir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewsevkehazir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlmustericiro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewmustericiro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlurunsatis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewurunsatis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlişemrigereken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewişemrigereken)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adfasdf)).BeginInit();
+            this.adfasdf.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControsevkehazir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewsevkehazir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlurunsatis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewurunsatis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlmustericiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewmustericiro)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
             this.groupControl1.Controls.Add(this.gridControlstokkontrol);
-            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Location = new System.Drawing.Point(75, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(942, 301);
+            this.groupControl1.Size = new System.Drawing.Size(879, 301);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Stok Kontrol Raporu";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImageOptions.Image")));
-            this.groupControl2.Controls.Add(this.gridControlişemrigereken);
-            this.groupControl2.Location = new System.Drawing.Point(970, 334);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(548, 268);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "İş Emri Verilmesi Gereken Siparişler";
-            // 
-            // adfasdf
-            // 
-            this.adfasdf.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImageOptions.Image")));
-            this.adfasdf.Controls.Add(this.gridControsevkehazir);
-            this.adfasdf.Location = new System.Drawing.Point(970, 12);
-            this.adfasdf.Name = "adfasdf";
-            this.adfasdf.Size = new System.Drawing.Size(548, 301);
-            this.adfasdf.TabIndex = 2;
-            this.adfasdf.Text = "Sevke Hazır Sipariş Listesi";
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImageOptions.Image")));
-            this.groupControl4.Controls.Add(this.gridControlurunsatis);
-            this.groupControl4.Location = new System.Drawing.Point(481, 334);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(473, 268);
-            this.groupControl4.TabIndex = 3;
-            this.groupControl4.Text = "Ürün Satış Raporu";
-            // 
-            // groupControl5
-            // 
-            this.groupControl5.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl5.CaptionImageOptions.Image")));
-            this.groupControl5.Controls.Add(this.gridControlmustericiro);
-            this.groupControl5.Location = new System.Drawing.Point(12, 334);
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(453, 268);
-            this.groupControl5.TabIndex = 4;
-            this.groupControl5.Text = "Müşteri Ciro Raporu";
             // 
             // gridControlstokkontrol
             // 
@@ -122,7 +83,7 @@
             this.gridControlstokkontrol.Location = new System.Drawing.Point(2, 33);
             this.gridControlstokkontrol.MainView = this.gridViewstokkontrol;
             this.gridControlstokkontrol.Name = "gridControlstokkontrol";
-            this.gridControlstokkontrol.Size = new System.Drawing.Size(938, 266);
+            this.gridControlstokkontrol.Size = new System.Drawing.Size(875, 266);
             this.gridControlstokkontrol.TabIndex = 0;
             this.gridControlstokkontrol.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewstokkontrol});
@@ -132,6 +93,43 @@
             this.gridViewstokkontrol.GridControl = this.gridControlstokkontrol;
             this.gridViewstokkontrol.Name = "gridViewstokkontrol";
             this.gridViewstokkontrol.OptionsView.ShowGroupPanel = false;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImageOptions.Image")));
+            this.groupControl2.Controls.Add(this.gridControlişemrigereken);
+            this.groupControl2.Location = new System.Drawing.Point(972, 334);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(546, 268);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "İş Emri Verilmesi Gereken Siparişler";
+            // 
+            // gridControlişemrigereken
+            // 
+            this.gridControlişemrigereken.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlişemrigereken.Location = new System.Drawing.Point(2, 33);
+            this.gridControlişemrigereken.MainView = this.gridViewişemrigereken;
+            this.gridControlişemrigereken.Name = "gridControlişemrigereken";
+            this.gridControlişemrigereken.Size = new System.Drawing.Size(542, 233);
+            this.gridControlişemrigereken.TabIndex = 1;
+            this.gridControlişemrigereken.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewişemrigereken});
+            // 
+            // gridViewişemrigereken
+            // 
+            this.gridViewişemrigereken.GridControl = this.gridControlişemrigereken;
+            this.gridViewişemrigereken.Name = "gridViewişemrigereken";
+            this.gridViewişemrigereken.OptionsView.ShowGroupPanel = false;
+            // 
+            // adfasdf
+            // 
+            this.adfasdf.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("adfasdf.CaptionImageOptions.Image")));
+            this.adfasdf.Controls.Add(this.gridControsevkehazir);
+            this.adfasdf.Location = new System.Drawing.Point(970, 12);
+            this.adfasdf.Name = "adfasdf";
+            this.adfasdf.Size = new System.Drawing.Size(548, 301);
+            this.adfasdf.TabIndex = 2;
+            this.adfasdf.Text = "Sevke Hazır Sipariş Listesi";
             // 
             // gridControsevkehazir
             // 
@@ -150,22 +148,15 @@
             this.gridViewsevkehazir.Name = "gridViewsevkehazir";
             this.gridViewsevkehazir.OptionsView.ShowGroupPanel = false;
             // 
-            // gridControlmustericiro
+            // groupControl4
             // 
-            this.gridControlmustericiro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlmustericiro.Location = new System.Drawing.Point(2, 33);
-            this.gridControlmustericiro.MainView = this.gridViewmustericiro;
-            this.gridControlmustericiro.Name = "gridControlmustericiro";
-            this.gridControlmustericiro.Size = new System.Drawing.Size(449, 233);
-            this.gridControlmustericiro.TabIndex = 1;
-            this.gridControlmustericiro.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewmustericiro});
-            // 
-            // gridViewmustericiro
-            // 
-            this.gridViewmustericiro.GridControl = this.gridControlmustericiro;
-            this.gridViewmustericiro.Name = "gridViewmustericiro";
-            this.gridViewmustericiro.OptionsView.ShowGroupPanel = false;
+            this.groupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImageOptions.Image")));
+            this.groupControl4.Controls.Add(this.gridControlurunsatis);
+            this.groupControl4.Location = new System.Drawing.Point(481, 334);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(473, 268);
+            this.groupControl4.TabIndex = 3;
+            this.groupControl4.Text = "Ürün Satış Raporu";
             // 
             // gridControlurunsatis
             // 
@@ -184,58 +175,79 @@
             this.gridViewurunsatis.Name = "gridViewurunsatis";
             this.gridViewurunsatis.OptionsView.ShowGroupPanel = false;
             // 
-            // gridControlişemrigereken
+            // groupControl5
             // 
-            this.gridControlişemrigereken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlişemrigereken.Location = new System.Drawing.Point(2, 33);
-            this.gridControlişemrigereken.MainView = this.gridViewişemrigereken;
-            this.gridControlişemrigereken.Name = "gridControlişemrigereken";
-            this.gridControlişemrigereken.Size = new System.Drawing.Size(544, 233);
-            this.gridControlişemrigereken.TabIndex = 1;
-            this.gridControlişemrigereken.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewişemrigereken});
+            this.groupControl5.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl5.CaptionImageOptions.Image")));
+            this.groupControl5.Controls.Add(this.gridControlmustericiro);
+            this.groupControl5.Location = new System.Drawing.Point(12, 334);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(453, 268);
+            this.groupControl5.TabIndex = 4;
+            this.groupControl5.Text = "Müşteri Ciro Raporu";
             // 
-            // gridViewişemrigereken
+            // gridControlmustericiro
             // 
-            this.gridViewişemrigereken.GridControl = this.gridControlişemrigereken;
-            this.gridViewişemrigereken.Name = "gridViewişemrigereken";
-            this.gridViewişemrigereken.OptionsView.ShowGroupPanel = false;
+            this.gridControlmustericiro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlmustericiro.Location = new System.Drawing.Point(2, 33);
+            this.gridControlmustericiro.MainView = this.gridViewmustericiro;
+            this.gridControlmustericiro.Name = "gridControlmustericiro";
+            this.gridControlmustericiro.Size = new System.Drawing.Size(449, 233);
+            this.gridControlmustericiro.TabIndex = 1;
+            this.gridControlmustericiro.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewmustericiro});
+            // 
+            // gridViewmustericiro
+            // 
+            this.gridViewmustericiro.GridControl = this.gridControlmustericiro;
+            this.gridViewmustericiro.Name = "gridViewmustericiro";
+            this.gridViewmustericiro.OptionsView.ShowGroupPanel = false;
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(12, 23);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnKaydet.Size = new System.Drawing.Size(37, 40);
+            this.btnKaydet.TabIndex = 9;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // FrmGenelRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1538, 618);
+            this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.adfasdf);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmGenelRapor";
-            this.Text = "Yönetim Üretim";
+            this.Text = "Genel Rapor";
             this.Load += new System.EventHandler(this.FrmGenelRapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adfasdf)).EndInit();
-            this.adfasdf.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
-            this.groupControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlstokkontrol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewstokkontrol)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControsevkehazir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewsevkehazir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlmustericiro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewmustericiro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlurunsatis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewurunsatis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlişemrigereken)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewişemrigereken)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adfasdf)).EndInit();
+            this.adfasdf.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControsevkehazir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewsevkehazir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlurunsatis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewurunsatis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlmustericiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewmustericiro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +269,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewurunsatis;
         private DevExpress.XtraGrid.GridControl gridControlmustericiro;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewmustericiro;
+        private DevExpress.XtraEditors.SimpleButton btnKaydet;
     }
 }

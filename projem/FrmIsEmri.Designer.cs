@@ -60,6 +60,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.comboil = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.comboboxatolye = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -76,10 +80,16 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboil.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxatolye.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboboxatolye);
+            this.groupBox1.Controls.Add(this.labelControl10);
+            this.groupBox1.Controls.Add(this.comboil);
+            this.groupBox1.Controls.Add(this.labelControl9);
             this.groupBox1.Controls.Add(this.txtStokKodu);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.sbtnSil);
@@ -107,7 +117,7 @@
             this.groupBox1.Controls.Add(this.labelControl3);
             this.groupBox1.Location = new System.Drawing.Point(12, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(755, 328);
+            this.groupBox1.Size = new System.Drawing.Size(765, 357);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İş Emri Genel Bilgiler";
@@ -124,9 +134,9 @@
             // 
             this.groupBox4.Controls.Add(this.rbtnTamamlanmis);
             this.groupBox4.Controls.Add(this.rbtnYeni);
-            this.groupBox4.Location = new System.Drawing.Point(402, 222);
+            this.groupBox4.Location = new System.Drawing.Point(414, 290);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(276, 89);
+            this.groupBox4.Size = new System.Drawing.Size(282, 61);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "İş Emri Durumu";
@@ -134,7 +144,7 @@
             // rbtnTamamlanmis
             // 
             this.rbtnTamamlanmis.AutoSize = true;
-            this.rbtnTamamlanmis.Location = new System.Drawing.Point(114, 43);
+            this.rbtnTamamlanmis.Location = new System.Drawing.Point(107, 29);
             this.rbtnTamamlanmis.Name = "rbtnTamamlanmis";
             this.rbtnTamamlanmis.Size = new System.Drawing.Size(140, 26);
             this.rbtnTamamlanmis.TabIndex = 1;
@@ -145,7 +155,7 @@
             // rbtnYeni
             // 
             this.rbtnYeni.AutoSize = true;
-            this.rbtnYeni.Location = new System.Drawing.Point(22, 43);
+            this.rbtnYeni.Location = new System.Drawing.Point(18, 29);
             this.rbtnYeni.Name = "rbtnYeni";
             this.rbtnYeni.Size = new System.Drawing.Size(67, 26);
             this.rbtnYeni.TabIndex = 0;
@@ -206,7 +216,7 @@
             // 
             // txtMiktar
             // 
-            this.txtMiktar.Location = new System.Drawing.Point(553, 168);
+            this.txtMiktar.Location = new System.Drawing.Point(571, 168);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(125, 22);
             this.txtMiktar.TabIndex = 19;
@@ -241,7 +251,7 @@
             // txtTeslimTarihi
             // 
             this.txtTeslimTarihi.EditValue = null;
-            this.txtTeslimTarihi.Location = new System.Drawing.Point(553, 129);
+            this.txtTeslimTarihi.Location = new System.Drawing.Point(571, 129);
             this.txtTeslimTarihi.Name = "txtTeslimTarihi";
             this.txtTeslimTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -285,7 +295,7 @@
             // txtStokAdi
             // 
             this.txtStokAdi.Enabled = false;
-            this.txtStokAdi.Location = new System.Drawing.Point(553, 89);
+            this.txtStokAdi.Location = new System.Drawing.Point(571, 89);
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Size = new System.Drawing.Size(181, 22);
             this.txtStokAdi.TabIndex = 10;
@@ -313,7 +323,7 @@
             // txtİsEmriTarihi
             // 
             this.txtİsEmriTarihi.EditValue = null;
-            this.txtİsEmriTarihi.Location = new System.Drawing.Point(553, 47);
+            this.txtİsEmriTarihi.Location = new System.Drawing.Point(571, 47);
             this.txtİsEmriTarihi.Name = "txtİsEmriTarihi";
             this.txtİsEmriTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -388,11 +398,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 358);
+            this.groupBox2.Location = new System.Drawing.Point(12, 387);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(755, 271);
+            this.groupBox2.Size = new System.Drawing.Size(764, 242);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İş Emri Listesi";
@@ -405,7 +415,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(747, 240);
+            this.gridControl1.Size = new System.Drawing.Size(756, 211);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -418,11 +428,49 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
+            // comboil
+            // 
+            this.comboil.Location = new System.Drawing.Point(572, 207);
+            this.comboil.Name = "comboil";
+            this.comboil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboil.Size = new System.Drawing.Size(125, 22);
+            this.comboil.TabIndex = 27;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(414, 203);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(135, 24);
+            this.labelControl9.TabIndex = 26;
+            this.labelControl9.Text = "Atanan Eleman";
+            // 
+            // comboboxatolye
+            // 
+            this.comboboxatolye.Location = new System.Drawing.Point(572, 250);
+            this.comboboxatolye.Name = "comboboxatolye";
+            this.comboboxatolye.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboboxatolye.Size = new System.Drawing.Size(125, 22);
+            this.comboboxatolye.TabIndex = 29;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(414, 246);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(147, 24);
+            this.labelControl10.TabIndex = 28;
+            this.labelControl10.Text = "Yapılacak Atölye";
+            // 
             // FrmIsEmri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 641);
+            this.ClientSize = new System.Drawing.Size(789, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -450,6 +498,8 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboil.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxatolye.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +537,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboboxatolye;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.ComboBoxEdit comboil;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }

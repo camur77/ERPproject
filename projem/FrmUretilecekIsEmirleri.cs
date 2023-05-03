@@ -39,7 +39,7 @@ namespace projem
             SqlCommand cmd = new SqlCommand("select ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,ISEMRI_ACIKLAMASI,SUBSTRING(ISEMRI_TARIHI,0,10) AS 'İŞ EMRİ TARİHİ', SUBSTRING(TESLIM_TARIHI,0,10) AS 'TESLİM TARİHİ',SIPARIS_NO,MIKTAR,SIPKALEM_ID FROM TBL_ISEMRI WHERE DURUM = 'Y' ", conn);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
             dataAdapter.Fill(dt);
-            gridControl1.DataSource = dt;
+            gridControl2.DataSource = dt;
             conn.Close();
         }
         string x1="";
@@ -57,13 +57,21 @@ namespace projem
 
         String sipno = "";
         string isemrino = "";
-        private void repositoryItemButtonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+       
+
+        private void btnKaydet_Click(object sender, EventArgs e)
         {
-            int x = gridView1.FocusedRowHandle;
-            isemrino = gridView1.GetRowCellValue(x,"ISEMRI_NUMARASI").ToString();
-            sipno = gridView1.GetRowCellValue(x, "SIPARIS_NO").ToString();
-            DialogResult secenek = MessageBox.Show("Seçili Ürünü Üretmek İstediğinizden Emin misiniz?", "Üretim Sonu Kaydı Uyarısı",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
-            if(secenek == DialogResult.Yes)
+            uretimsonukaydinumarasihesaplama();
+            isemrilisteleme();
+        }
+
+        private void repositoryItemButtonEdit2_Click(object sender, EventArgs e)
+        {
+            int x = gridView2.FocusedRowHandle;
+            isemrino = gridView2.GetRowCellValue(x, "ISEMRI_NUMARASI").ToString();
+            sipno = gridView2.GetRowCellValue(x, "SIPARIS_NO").ToString();
+            DialogResult secenek = MessageBox.Show("Seçili Ürünü Üretmek İstediğinizden Emin misiniz?", "Üretim Sonu Kaydı Uyarısı", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (secenek == DialogResult.Yes)
             {
                 string stokkodu = "";
                 string stokadi = "";
@@ -72,8 +80,8 @@ namespace projem
                 string musterikodu = "";
                 string musteradi = "";
 
-                conn.Open();    
-                SqlCommand sorgu1 = new SqlCommand("select * from TBL_ISEMRI where ISEMRI_NUMARASI = '"+isemrino+"'",conn);
+                conn.Open();
+                SqlCommand sorgu1 = new SqlCommand("select * from TBL_ISEMRI where ISEMRI_NUMARASI = '" + isemrino + "'", conn);
                 SqlDataReader dr1 = sorgu1.ExecuteReader();
                 while (dr1.Read())
                 {
@@ -85,7 +93,7 @@ namespace projem
                 conn.Close();
 
                 conn.Open();
-                SqlCommand sorgu2 = new SqlCommand("SELECT SIP.MUSTERI_KODU, MK.MUSTERI_ADI FROM TBL_SIPARISLER SIP LEFT JOIN TBL_MUSTERIKAYITLARI MK ON SIP.MUSTERI_KODU = MK.MUSTERI_KODU WHERE SIPARIS_NO = '"+sipno+"'", conn);
+                SqlCommand sorgu2 = new SqlCommand("SELECT SIP.MUSTERI_KODU, MK.MUSTERI_ADI FROM TBL_SIPARISLER SIP LEFT JOIN TBL_MUSTERIKAYITLARI MK ON SIP.MUSTERI_KODU = MK.MUSTERI_KODU WHERE SIPARIS_NO = '" + sipno + "'", conn);
                 SqlDataReader dr2 = sorgu2.ExecuteReader();
                 while (dr2.Read())
                 {
@@ -122,7 +130,6 @@ namespace projem
             {
                 MessageBox.Show("Üretim İşlemi İptal Edilmiştir!!");
             }
-            
         }
     }
 }

@@ -156,6 +156,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboil.Size = new System.Drawing.Size(125, 22);
             this.comboil.TabIndex = 6;
+            this.comboil.SelectedIndexChanged += new System.EventHandler(this.comboil_SelectedIndexChanged);
             this.comboil.TextChanged += new System.EventHandler(this.comboil_TextChanged);
             this.comboil.Leave += new System.EventHandler(this.comboil_Leave);
             // 

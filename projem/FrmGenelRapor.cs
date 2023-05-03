@@ -86,5 +86,14 @@ namespace projem
             urunsatısraporu();
             musterilisteleme();
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            sevkehazirsiparislistesi();
+            stokkontrolraporu();
+            eksikisemirleri();
+            urunsatısraporu();
+            musterilisteleme();
+        }
     }
 }

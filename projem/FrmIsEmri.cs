@@ -150,6 +150,7 @@ namespace projem
             txtStokAdi.Text = "";
             txtStokKodu.Text = "";
             txtTeslimTarihi.Text = "";
+
             txtStokKodu.Enabled = true;
             txtMiktar.Enabled = true;
             txtSiparisNumarasi.Enabled = true;
@@ -187,10 +188,39 @@ namespace projem
             frm.Show();
         }
 
+        void calisanlisteleme()
+        {
+            comboil.Properties.Items.Clear();
+            conn.Open();
+            SqlCommand sorgu1 = new SqlCommand("Select CALISAN_AD FROM TBL_CALISANLAR ", conn);
+            SqlDataReader dr1 = sorgu1.ExecuteReader();
+            while (dr1.Read())
+            {
+                comboil.Properties.Items.Add(dr1[0]);
+            }
+
+            conn.Close();
+        }
+
+        void atolyelisteleme()
+        {
+            comboboxatolye.Properties.Items.Clear();
+            conn.Open();
+            SqlCommand sorgu1 = new SqlCommand("Select ATOLYE_NUMARASI FROM TBL_ATOLYELER ", conn);
+            SqlDataReader dr1 = sorgu1.ExecuteReader();
+            while (dr1.Read())
+            {
+                comboboxatolye.Properties.Items.Add(dr1[0]);
+            }
+
+            conn.Close();
+        }
         private void FrmIsEmri_Load(object sender, EventArgs e)
         {
             gridView1.OptionsBehavior.Editable = false;
             isemrilistesicekme();
+            calisanlisteleme();
+            atolyelisteleme();
         }
 
         private void txtIsEmriNumarasi_Leave(object sender, EventArgs e)
