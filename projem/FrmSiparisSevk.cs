@@ -61,7 +61,7 @@ namespace projem
             z = x["SIPARIS_NO"].ToString();
             conn.Open();
             DataTable dt = new DataTable();
-            SqlCommand sorgu1 = new SqlCommand("SELECT STOK_KODU,STOK_ADI,MIKTAR,URUN_ACIKLAMASI,SIPKALEM_ID FROM TBL_SIPARISKALEMLERI WHERE SIPARIS_NO = '"+z+"'", conn);
+            SqlCommand sorgu1 = new SqlCommand("SELECT STOK_KODU,STOK_ADI,MIKTAR AS 'MIKTAR(ADET)',URUN_ACIKLAMASI,SIPKALEM_ID FROM TBL_SIPARISKALEMLERI WHERE SIPARIS_NO = '" + z+"'", conn);
             SqlDataAdapter da = new SqlDataAdapter(sorgu1);
             da.Fill(dt);
             gridsiparisicerik.DataSource = dt;
@@ -81,7 +81,7 @@ namespace projem
                 string musteriadi = "";
                 string kalemID = gridviewsiparisiceri.GetRowCellValue(i,"SIPKALEM_ID").ToString();
                 conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("SELECT S.MUSTERI_KODU,SK.STOK_KODU,SK.STOK_ADI,SK.MIKTAR,MK.MUSTERI_ADI FROM TBL_SIPARISKALEMLERI SK LEFT JOIN TBL_SIPARISLER S ON SK.SIPARIS_NO = S.SIPARIS_NO LEFT JOIN TBL_MUSTERIKAYITLARI MK ON S.MUSTERI_KODU = MK.MUSTERI_KODU WHERE SIPKALEM_ID = '"+kalemID+"'", conn);
+                SqlCommand sorgu1 = new SqlCommand("SELECT S.MUSTERI_KODU,SK.STOK_KODU,SK.STOK_ADI,SK.MIKTAR AS 'MIKTAR(ADET)',MK.MUSTERI_ADI FROM TBL_SIPARISKALEMLERI SK LEFT JOIN TBL_SIPARISLER S ON SK.SIPARIS_NO = S.SIPARIS_NO LEFT JOIN TBL_MUSTERIKAYITLARI MK ON S.MUSTERI_KODU = MK.MUSTERI_KODU WHERE SIPKALEM_ID = '" + kalemID+"'", conn);
                 SqlDataReader dr = sorgu1.ExecuteReader();
                 while(dr.Read())
                 {

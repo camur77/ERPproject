@@ -86,11 +86,11 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(505, 95);
+            this.labelControl4.Location = new System.Drawing.Point(461, 95);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(171, 24);
+            this.labelControl4.Size = new System.Drawing.Size(236, 24);
             this.labelControl4.TabIndex = 8;
-            this.labelControl4.Text = "Güncel Stok Miktarı";
+            this.labelControl4.Text = "Güncel Stok Miktarı(ADET)";
             // 
             // txtStokMiktari
             // 

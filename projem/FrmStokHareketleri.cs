@@ -45,7 +45,7 @@ namespace projem
             conn.Close();
 
             conn.Open();
-            SqlCommand sorgu2 = new SqlCommand(" SELECT ISNULL((SUM(G_MIKTAR))-(SUM(C_MIKTAR)),0) AS 'STOK MİKTARI' FROM TBL_STOK_HAREKETLERI where STOK_KODU = '"+txtStokKodu.Text+"' ", conn);
+            SqlCommand sorgu2 = new SqlCommand(" SELECT ISNULL((SUM(G_MIKTAR))-(SUM(C_MIKTAR)),0) AS 'STOK MİKTARI (ADET)' FROM TBL_STOK_HAREKETLERI where STOK_KODU = '"+txtStokKodu.Text+"' ", conn);
             SqlDataReader dr1 = sorgu2.ExecuteReader();
             while (dr1.Read())
             {

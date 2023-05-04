@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIsEmri));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboboxatolye = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.comboil = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokKodu = new DevExpress.XtraEditors.TextEdit();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rbtnTamamlanmis = new System.Windows.Forms.RadioButton();
@@ -60,11 +64,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.comboil = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.comboboxatolye = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxatolye.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSiparisKalemID.Properties)).BeginInit();
@@ -80,8 +82,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboil.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboboxatolye.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -121,6 +121,44 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İş Emri Genel Bilgiler";
+            // 
+            // comboboxatolye
+            // 
+            this.comboboxatolye.Location = new System.Drawing.Point(572, 250);
+            this.comboboxatolye.Name = "comboboxatolye";
+            this.comboboxatolye.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboboxatolye.Size = new System.Drawing.Size(125, 22);
+            this.comboboxatolye.TabIndex = 29;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(414, 246);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(147, 24);
+            this.labelControl10.TabIndex = 28;
+            this.labelControl10.Text = "Yapılacak Atölye";
+            // 
+            // comboil
+            // 
+            this.comboil.Location = new System.Drawing.Point(572, 207);
+            this.comboil.Name = "comboil";
+            this.comboil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboil.Size = new System.Drawing.Size(125, 22);
+            this.comboil.TabIndex = 27;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(414, 203);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(135, 24);
+            this.labelControl9.TabIndex = 26;
+            this.labelControl9.Text = "Atanan Eleman";
             // 
             // txtStokKodu
             // 
@@ -210,9 +248,9 @@
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(414, 164);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(55, 24);
+            this.labelControl7.Size = new System.Drawing.Size(120, 24);
             this.labelControl7.TabIndex = 18;
-            this.labelControl7.Text = "Miktar";
+            this.labelControl7.Text = "Miktar(ADET)";
             // 
             // txtMiktar
             // 
@@ -428,44 +466,6 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // comboil
-            // 
-            this.comboil.Location = new System.Drawing.Point(572, 207);
-            this.comboil.Name = "comboil";
-            this.comboil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboil.Size = new System.Drawing.Size(125, 22);
-            this.comboil.TabIndex = 27;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(414, 203);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(135, 24);
-            this.labelControl9.TabIndex = 26;
-            this.labelControl9.Text = "Atanan Eleman";
-            // 
-            // comboboxatolye
-            // 
-            this.comboboxatolye.Location = new System.Drawing.Point(572, 250);
-            this.comboboxatolye.Name = "comboboxatolye";
-            this.comboboxatolye.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboboxatolye.Size = new System.Drawing.Size(125, 22);
-            this.comboboxatolye.TabIndex = 29;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(414, 246);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(147, 24);
-            this.labelControl10.TabIndex = 28;
-            this.labelControl10.Text = "Yapılacak Atölye";
-            // 
             // FrmIsEmri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -482,6 +482,8 @@
             this.Load += new System.EventHandler(this.FrmIsEmri_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxatolye.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -498,8 +500,6 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboil.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboboxatolye.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

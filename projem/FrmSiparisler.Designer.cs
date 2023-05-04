@@ -341,7 +341,7 @@
             // txtKDV
             // 
             this.txtKDV.EditValue = "";
-            this.txtKDV.Location = new System.Drawing.Point(864, 86);
+            this.txtKDV.Location = new System.Drawing.Point(898, 86);
             this.txtKDV.Name = "txtKDV";
             this.txtKDV.Size = new System.Drawing.Size(85, 22);
             this.txtKDV.TabIndex = 12;
@@ -358,7 +358,7 @@
             // 
             // txtMiktar
             // 
-            this.txtMiktar.Location = new System.Drawing.Point(864, 45);
+            this.txtMiktar.Location = new System.Drawing.Point(898, 45);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(85, 22);
             this.txtMiktar.TabIndex = 10;
@@ -369,9 +369,9 @@
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.Location = new System.Drawing.Point(763, 43);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(55, 24);
+            this.labelControl11.Size = new System.Drawing.Size(120, 24);
             this.labelControl11.TabIndex = 11;
-            this.labelControl11.Text = "Miktar";
+            this.labelControl11.Text = "Miktar(ADET)";
             // 
             // txtFiyat
             // 

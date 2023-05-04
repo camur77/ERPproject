@@ -120,7 +120,7 @@ namespace projem
         {
             conn.Open();
             DataTable dt = new DataTable();
-            SqlCommand sorgu1 = new SqlCommand("SELECT ISEMRI_NUMARASI, STOK_KODU,STOK_ADI,MIKTAR,DURUM FROM TBL_ISEMRI",conn);
+            SqlCommand sorgu1 = new SqlCommand("SELECT ISEMRI_NUMARASI, STOK_KODU,STOK_ADI,MIKTAR AS 'MIKTAR(ADET)',DURUM FROM TBL_ISEMRI",conn);
             SqlDataAdapter da = new SqlDataAdapter(sorgu1);
             da.Fill(dt);
             gridControl1.DataSource = dt;

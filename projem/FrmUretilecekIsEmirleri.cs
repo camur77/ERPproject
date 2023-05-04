@@ -123,6 +123,15 @@ namespace projem
                 sorgu6.ExecuteNonQuery();
                 conn.Close();
 
+
+                conn.Open();
+                SqlCommand sorgu7 = new SqlCommand("UPDATE TBL_STOKPARCALARI SET STOK_MIKTARI = STOK_MIKTARI -1  ", conn);
+                sorgu7.ExecuteNonQuery();
+                conn.Close();
+                
+                
+
+
                 isemrilisteleme();
                 MessageBox.Show("Üretim İşlemi Başarı İle Gerçekleştirilimiştir.");
             }

@@ -201,7 +201,7 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "MIKTAR";
-            this.gridColumn9.FieldName = "MIKTAR";
+            this.gridColumn9.FieldName = "MIKTAR(ADET)";
             this.gridColumn9.MinWidth = 39;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;

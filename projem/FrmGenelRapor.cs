@@ -45,7 +45,7 @@ namespace projem
         {
             conn.Open();
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT STOK_KODU AS 'STOK KODU', STOK_ADI AS 'STOK ADI',MIKTAR AS 'MİKTAR',SIPKALEM_ID AS 'SİPARİŞ ID' FROM TBL_SIPARISKALEMLERI WHERE URETIMDURUMU = 'K'", conn);
+            SqlCommand cmd = new SqlCommand("SELECT STOK_KODU AS 'STOK KODU', STOK_ADI AS 'STOK ADI',MIKTAR AS 'MİKTAR(ADET)',SIPKALEM_ID AS 'SİPARİŞ ID' FROM TBL_SIPARISKALEMLERI WHERE URETIMDURUMU = 'K'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             gridControlişemrigereken.DataSource = dt;
@@ -56,7 +56,7 @@ namespace projem
         {
             conn.Open();
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("select TOP 25 STOK_ADI AS 'STOK ADI', SUM(MIKTAR) AS 'TOPLAM SATIŞ MİKTARI' FROM TBL_SIPARISKALEMLERI SIP GROUP BY STOK_ADI ORDER BY SUM(MIKTAR) DESC", conn);
+            SqlCommand cmd = new SqlCommand("select TOP 25 STOK_ADI AS 'STOK ADI', SUM(MIKTAR) AS 'TOPLAM SATIŞ MİKTARI (ADET)' FROM TBL_SIPARISKALEMLERI SIP GROUP BY STOK_ADI ORDER BY SUM(MIKTAR) DESC", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             gridControlurunsatis.DataSource = dt;
@@ -72,6 +72,17 @@ namespace projem
             gridControlmustericiro.DataSource = dt;
             conn.Close();
         }
+
+        void parcalisteleme()
+        {
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM TBL_STOKPARCALARI", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            gridControlparcastokları.DataSource = dt;
+            conn.Close();
+        }
         private void FrmGenelRapor_Load(object sender, EventArgs e)
         {
             gridViewişemrigereken.OptionsBehavior.Editable = false;
@@ -85,6 +96,7 @@ namespace projem
             eksikisemirleri();
             urunsatısraporu();
             musterilisteleme();
+            parcalisteleme();
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -94,6 +106,7 @@ namespace projem
             eksikisemirleri();
             urunsatısraporu();
             musterilisteleme();
+            parcalisteleme();
         }
     }
 }

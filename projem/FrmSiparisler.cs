@@ -51,7 +51,7 @@ namespace projem
         {
             conn.Open();
             DataTable dataTable = new DataTable();
-            SqlCommand sorgu1 = new SqlCommand("select STOK_KODU, STOK_ADI, MIKTAR, FIYAT, KDV, SIPKALEM_ID FROM TBL_SIPARISKALEMLERI WHERE SIPARIS_NO = '"+txtSiparisNumarasi.Text+"'",conn);
+            SqlCommand sorgu1 = new SqlCommand("select STOK_KODU, STOK_ADI, MIKTAR AS 'MIKTAR(ADET)', FIYAT, KDV, SIPKALEM_ID FROM TBL_SIPARISKALEMLERI WHERE SIPARIS_NO = '"+txtSiparisNumarasi.Text+"'",conn);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sorgu1);
             sqlDataAdapter.Fill(dataTable);
             gridControl1.DataSource = dataTable;

@@ -212,9 +212,9 @@
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(24, 223);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(55, 24);
+            this.labelControl7.Size = new System.Drawing.Size(120, 24);
             this.labelControl7.TabIndex = 9;
-            this.labelControl7.Text = "Miktar";
+            this.labelControl7.Text = "Miktar(ADET)";
             // 
             // txtMiktar
             // 
