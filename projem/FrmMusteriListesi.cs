@@ -37,6 +37,7 @@ namespace projem
 
         private void FrmMusteriListesi_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             arama();
         }

@@ -111,6 +111,7 @@ namespace projem
 
         private void FrmMusteriKayitlari_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             illisteleme();
         }
 
@@ -257,6 +258,10 @@ namespace projem
             if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
+            }
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnKaydet.PerformClick();
             }
         }
     }

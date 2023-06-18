@@ -217,6 +217,7 @@ namespace projem
         }
         private void FrmIsEmri_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             isemrilistesicekme();
             calisanlisteleme();
@@ -405,6 +406,10 @@ namespace projem
             if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
+            }
+            if(e.KeyCode == Keys.Enter)
+            {
+                sbtnKaydet.PerformClick();
             }
         }
     }

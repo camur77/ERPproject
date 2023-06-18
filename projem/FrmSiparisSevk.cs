@@ -43,6 +43,7 @@ namespace projem
         }
         private void FrmSiparisSevk_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             searchLookUpEdit1.EditValue = "";
             gridviewsiparis.OptionsBehavior.Editable = false;
             gridviewsiparisiceri.OptionsBehavior.Editable = false;
@@ -112,6 +113,10 @@ namespace projem
             if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
+            }
+            if(e.KeyCode == Keys.Enter)
+            {
+                simpleButton1.PerformClick();
             }
         }
     }

@@ -39,6 +39,7 @@ namespace projem
 
         private void FrmStokListesi_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             //ilk açıldığında bütün veriler gözükür
             gridView1.OptionsBehavior.Editable = false;
             arama();

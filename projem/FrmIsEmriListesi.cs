@@ -45,6 +45,7 @@ namespace projem
 
         private void FrmIsEmriListesi_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             if(isemrino == "uretimsonukayit")
             {

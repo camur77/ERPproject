@@ -32,6 +32,7 @@ namespace projem
 
         private void FrmIsEmriSiparisleri_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             conn.Open();
             DataTable dataTable = new DataTable();

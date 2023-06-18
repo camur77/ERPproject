@@ -198,6 +198,7 @@ namespace projem
 
         private void FrmSiparisler_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             txtStokAdı.Enabled = false;
             txtKDV.Enabled = false;
@@ -489,6 +490,10 @@ namespace projem
             if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
+            }
+            if(e.KeyCode == Keys.Enter) { 
+                sbtnKaydet.PerformClick();
+             
             }
         }
     }

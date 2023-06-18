@@ -38,6 +38,7 @@ namespace projem
 
         private void FrmUretimSonuKayitListesi_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             arama();
         }

@@ -323,6 +323,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "FrmUretimSonuKayitlari";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üretim Sonu Kayıtları";

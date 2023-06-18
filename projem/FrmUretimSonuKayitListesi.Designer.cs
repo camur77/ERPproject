@@ -227,6 +227,7 @@
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "FrmUretimSonuKayitListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üretim Sonu Kayıt Listesi";

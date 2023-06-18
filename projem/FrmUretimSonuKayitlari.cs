@@ -142,7 +142,7 @@ namespace projem
 
         private void FrmUretimSonuKayitlari_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void txtIsEmriNumarasi_Leave(object sender, EventArgs e)
@@ -287,6 +287,10 @@ namespace projem
             if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
+            }
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnKaydet.PerformClick();
             }
         }
     }

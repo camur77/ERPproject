@@ -110,7 +110,7 @@ namespace projem
 
         private void FrmStokKayıtları_Load(object sender, EventArgs e)
         {
-            
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void txtStokKodu_Leave(object sender, EventArgs e)
