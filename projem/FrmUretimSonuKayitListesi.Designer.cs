@@ -226,9 +226,12 @@
             this.ClientSize = new System.Drawing.Size(1058, 535);
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
+            this.KeyPreview = true;
             this.Name = "FrmUretimSonuKayitListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üretim Sonu Kayıt Listesi";
             this.Load += new System.EventHandler(this.FrmUretimSonuKayitListesi_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUretimSonuKayitListesi_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();

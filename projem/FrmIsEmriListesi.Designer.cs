@@ -62,7 +62,6 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            //this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -191,11 +190,14 @@
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIsEmriListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İş Emri Listesi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIsEmriListesi_FormClosed);
             this.Load += new System.EventHandler(this.FrmIsEmriListesi_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmIsEmriListesi_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.Si.ResumeLayout(false);

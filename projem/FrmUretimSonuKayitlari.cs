@@ -281,5 +281,13 @@ namespace projem
             temizle();
             txtFisNo.Text = "";
         }
+
+        private void FrmUretimSonuKayitlari_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

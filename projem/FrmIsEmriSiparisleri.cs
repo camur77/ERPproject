@@ -46,5 +46,13 @@ namespace projem
         {
             kalemid = "";
         }
+
+        private void FrmIsEmriSiparisleri_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

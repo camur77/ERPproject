@@ -251,5 +251,13 @@ namespace projem
         {
 
         }
+
+        private void FrmMusteriKayitlari_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

@@ -322,11 +322,14 @@
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.KeyPreview = true;
             this.Name = "FrmUretimSonuKayitlari";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üretim Sonu Kayıtları";
             this.Activated += new System.EventHandler(this.FrmUretimSonuKayitlari_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmUretimSonuKayitlari_FormClosed);
             this.Load += new System.EventHandler(this.FrmUretimSonuKayitlari_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUretimSonuKayitlari_KeyDown);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFisNo.Properties)).EndInit();

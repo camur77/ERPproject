@@ -93,5 +93,13 @@ namespace projem
         {
 
         }
+
+        private void FrmMusteriListesi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

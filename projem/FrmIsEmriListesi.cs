@@ -144,5 +144,13 @@ namespace projem
                 frm.Activate();
             }
         }
+
+        private void FrmIsEmriListesi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

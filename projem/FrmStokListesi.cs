@@ -101,5 +101,13 @@ namespace projem
             //kapattığımızda tekrar sıfırlansın
             stokkodu = "";
         }
+
+        private void FrmStokListesi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

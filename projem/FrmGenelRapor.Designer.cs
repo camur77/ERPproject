@@ -44,7 +44,6 @@
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlmustericiro = new DevExpress.XtraGrid.GridControl();
             this.gridViewmustericiro = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlparcastokları = new DevExpress.XtraGrid.GridControl();
             this.gridViewparcastokları = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -78,7 +77,7 @@
             // 
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
             this.groupControl1.Controls.Add(this.gridControlstokkontrol);
-            this.groupControl1.Location = new System.Drawing.Point(74, 12);
+            this.groupControl1.Location = new System.Drawing.Point(14, 12);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(880, 301);
             this.groupControl1.TabIndex = 0;
@@ -132,9 +131,9 @@
             // 
             this.adfasdf.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("adfasdf.CaptionImageOptions.Image")));
             this.adfasdf.Controls.Add(this.gridControsevkehazir);
-            this.adfasdf.Location = new System.Drawing.Point(970, 12);
+            this.adfasdf.Location = new System.Drawing.Point(912, 12);
             this.adfasdf.Name = "adfasdf";
-            this.adfasdf.Size = new System.Drawing.Size(548, 301);
+            this.adfasdf.Size = new System.Drawing.Size(604, 301);
             this.adfasdf.TabIndex = 2;
             this.adfasdf.Text = "Sevke Hazır Sipariş Listesi";
             // 
@@ -144,7 +143,7 @@
             this.gridControsevkehazir.Location = new System.Drawing.Point(2, 33);
             this.gridControsevkehazir.MainView = this.gridViewsevkehazir;
             this.gridControsevkehazir.Name = "gridControsevkehazir";
-            this.gridControsevkehazir.Size = new System.Drawing.Size(544, 266);
+            this.gridControsevkehazir.Size = new System.Drawing.Size(600, 266);
             this.gridControsevkehazir.TabIndex = 1;
             this.gridControsevkehazir.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewsevkehazir});
@@ -209,16 +208,6 @@
             this.gridViewmustericiro.Name = "gridViewmustericiro";
             this.gridViewmustericiro.OptionsView.ShowGroupPanel = false;
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(12, 23);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKaydet.Size = new System.Drawing.Size(37, 40);
-            this.btnKaydet.TabIndex = 9;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            // 
             // groupControl3
             // 
             this.groupControl3.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImageOptions.Image")));
@@ -252,17 +241,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1538, 618);
             this.Controls.Add(this.groupControl3);
-            this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.adfasdf);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmGenelRapor";
             this.Text = "Genel Rapor";
             this.Load += new System.EventHandler(this.FrmGenelRapor_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGenelRapor_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlstokkontrol)).EndInit();
@@ -308,7 +298,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewurunsatis;
         private DevExpress.XtraGrid.GridControl gridControlmustericiro;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewmustericiro;
-        private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl gridControlparcastokları;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewparcastokları;

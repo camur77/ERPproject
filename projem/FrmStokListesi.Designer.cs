@@ -166,11 +166,14 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStokListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Listesi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmStokListesi_FormClosed);
             this.Load += new System.EventHandler(this.FrmStokListesi_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmStokListesi_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();

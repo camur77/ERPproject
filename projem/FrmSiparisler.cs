@@ -483,5 +483,13 @@ namespace projem
             FrmMusteriListesi.musterıkodu = "";
             FrmSiparisListesi.siparisno = "";
         }
+
+        private void FrmSiparisler_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

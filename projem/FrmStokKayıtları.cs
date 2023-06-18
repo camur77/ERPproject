@@ -224,5 +224,16 @@ namespace projem
                 MessageBox.Show("BOYLE BIR STOK KAYDI YOKTUR !!!");
             }
         }
+
+        private void FrmStokKayıtları_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape) {
+                this.Hide();
+            }
+            if(e.KeyCode == Keys.Enter)
+            {
+                sbtnKaydet.PerformClick();
+            }
+        }
     }
 }

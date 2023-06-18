@@ -84,5 +84,13 @@ namespace projem
                 frm.Activate();
             }
         }
+
+        private void FrmUretimSonuKayitListesi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+            }
+        }
     }
 }

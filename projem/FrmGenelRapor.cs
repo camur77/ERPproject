@@ -99,14 +99,26 @@ namespace projem
             parcalisteleme();
         }
 
-        private void btnKaydet_Click(object sender, EventArgs e)
+        private void FrmGenelRapor_KeyDown(object sender, KeyEventArgs e)
         {
-            sevkehazirsiparislistesi();
-            stokkontrolraporu();
-            eksikisemirleri();
-            urunsatısraporu();
-            musterilisteleme();
-            parcalisteleme();
+            if(e.KeyCode == Keys.F5) {
+                sevkehazirsiparislistesi();
+                stokkontrolraporu();
+                eksikisemirleri();
+                urunsatısraporu();
+                musterilisteleme();
+                parcalisteleme();
+            }
         }
+
+        /* private void btnKaydet_Click(object sender, EventArgs e)
+         {
+             sevkehazirsiparislistesi();
+             stokkontrolraporu();
+             eksikisemirleri();
+             urunsatısraporu();
+             musterilisteleme();
+             parcalisteleme();
+         }*/
     }
 }

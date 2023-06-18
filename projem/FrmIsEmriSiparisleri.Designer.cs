@@ -76,11 +76,14 @@
             this.ClientSize = new System.Drawing.Size(786, 425);
             this.Controls.Add(this.Si);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmIsEmriSiparisleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İş Emrine Uygun Sipariş Listesi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIsEmriSiparisleri_FormClosed);
             this.Load += new System.EventHandler(this.FrmIsEmriSiparisleri_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmIsEmriSiparisleri_KeyDown);
             this.Si.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
