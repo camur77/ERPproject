@@ -126,6 +126,7 @@
             this.sbtnSiparisTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnSiparisTemizle.Size = new System.Drawing.Size(37, 35);
             this.sbtnSiparisTemizle.TabIndex = 9;
+            this.sbtnSiparisTemizle.Click += new System.EventHandler(this.sbtnSiparisTemizle_Click_1);
             // 
             // labelControl14
             // 
@@ -331,7 +332,6 @@
             // 
             // sbtnUrunTemizle
             // 
-            this.sbtnUrunTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnUrunTemizle.ImageOptions.Image")));
             this.sbtnUrunTemizle.Location = new System.Drawing.Point(190, 0);
             this.sbtnUrunTemizle.Name = "sbtnUrunTemizle";
             this.sbtnUrunTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;

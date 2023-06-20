@@ -81,15 +81,15 @@
             this.groupBox2.Size = new System.Drawing.Size(622, 138);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Üretim Sonu Kaydı Bilgileri";
+            this.groupBox2.Text = "Üretim Sonu Kaydı";
             // 
             // sbtnSiparisTemizle
             // 
             this.sbtnSiparisTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSiparisTemizle.ImageOptions.Image")));
-            this.sbtnSiparisTemizle.Location = new System.Drawing.Point(6, 35);
+            this.sbtnSiparisTemizle.Location = new System.Drawing.Point(124, 0);
             this.sbtnSiparisTemizle.Name = "sbtnSiparisTemizle";
             this.sbtnSiparisTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.sbtnSiparisTemizle.Size = new System.Drawing.Size(37, 30);
+            this.sbtnSiparisTemizle.Size = new System.Drawing.Size(49, 35);
             this.sbtnSiparisTemizle.TabIndex = 10;
             this.sbtnSiparisTemizle.Click += new System.EventHandler(this.sbtnSiparisTemizle_Click);
             // 
@@ -153,21 +153,15 @@
             // 
             this.groupBox1.Controls.Add(this.labelControl9);
             this.groupBox1.Controls.Add(this.txtMusteriAdi);
-            this.groupBox1.Controls.Add(this.labelControl8);
-            this.groupBox1.Controls.Add(this.txtMusteriKodu);
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.txtMiktar);
-            this.groupBox1.Controls.Add(this.labelControl6);
-            this.groupBox1.Controls.Add(this.txtKalemId);
             this.groupBox1.Controls.Add(this.labelControl3);
             this.groupBox1.Controls.Add(this.txtStokAdi);
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Controls.Add(this.txtSiparisNumarasi);
-            this.groupBox1.Controls.Add(this.labelControl2);
-            this.groupBox1.Controls.Add(this.txtStokKodu);
             this.groupBox1.Location = new System.Drawing.Point(78, 166);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 352);
+            this.groupBox1.Size = new System.Drawing.Size(466, 233);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İş Emri Detay Bilgileri";
@@ -176,7 +170,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(24, 315);
+            this.labelControl9.Location = new System.Drawing.Point(24, 175);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(99, 24);
             this.labelControl9.TabIndex = 13;
@@ -184,7 +178,8 @@
             // 
             // txtMusteriAdi
             // 
-            this.txtMusteriAdi.Location = new System.Drawing.Point(295, 317);
+            this.txtMusteriAdi.Enabled = false;
+            this.txtMusteriAdi.Location = new System.Drawing.Point(295, 177);
             this.txtMusteriAdi.Name = "txtMusteriAdi";
             this.txtMusteriAdi.Size = new System.Drawing.Size(125, 22);
             this.txtMusteriAdi.TabIndex = 14;
@@ -193,24 +188,26 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(24, 269);
+            this.labelControl8.Location = new System.Drawing.Point(229, 154);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(116, 24);
             this.labelControl8.TabIndex = 11;
             this.labelControl8.Text = "Müşteri Kodu";
+            this.labelControl8.Visible = false;
             // 
             // txtMusteriKodu
             // 
-            this.txtMusteriKodu.Location = new System.Drawing.Point(295, 271);
+            this.txtMusteriKodu.Location = new System.Drawing.Point(500, 156);
             this.txtMusteriKodu.Name = "txtMusteriKodu";
             this.txtMusteriKodu.Size = new System.Drawing.Size(125, 22);
             this.txtMusteriKodu.TabIndex = 12;
+            this.txtMusteriKodu.Visible = false;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(24, 223);
+            this.labelControl7.Location = new System.Drawing.Point(24, 131);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(120, 24);
             this.labelControl7.TabIndex = 9;
@@ -218,7 +215,8 @@
             // 
             // txtMiktar
             // 
-            this.txtMiktar.Location = new System.Drawing.Point(295, 227);
+            this.txtMiktar.Enabled = false;
+            this.txtMiktar.Location = new System.Drawing.Point(295, 135);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(125, 22);
             this.txtMiktar.TabIndex = 10;
@@ -227,24 +225,26 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(24, 179);
+            this.labelControl6.Location = new System.Drawing.Point(37, 539);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(148, 24);
             this.labelControl6.TabIndex = 7;
             this.labelControl6.Text = "Sipariş Kalem ID";
+            this.labelControl6.Visible = false;
             // 
             // txtKalemId
             // 
-            this.txtKalemId.Location = new System.Drawing.Point(295, 183);
+            this.txtKalemId.Location = new System.Drawing.Point(308, 543);
             this.txtKalemId.Name = "txtKalemId";
             this.txtKalemId.Size = new System.Drawing.Size(125, 22);
             this.txtKalemId.TabIndex = 8;
+            this.txtKalemId.Visible = false;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(24, 135);
+            this.labelControl3.Location = new System.Drawing.Point(24, 88);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(73, 24);
             this.labelControl3.TabIndex = 5;
@@ -252,7 +252,8 @@
             // 
             // txtStokAdi
             // 
-            this.txtStokAdi.Location = new System.Drawing.Point(295, 139);
+            this.txtStokAdi.Enabled = false;
+            this.txtStokAdi.Location = new System.Drawing.Point(295, 92);
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Size = new System.Drawing.Size(125, 22);
             this.txtStokAdi.TabIndex = 6;
@@ -269,6 +270,7 @@
             // 
             // txtSiparisNumarasi
             // 
+            this.txtSiparisNumarasi.Enabled = false;
             this.txtSiparisNumarasi.Location = new System.Drawing.Point(295, 47);
             this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
             this.txtSiparisNumarasi.Size = new System.Drawing.Size(125, 22);
@@ -278,23 +280,25 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(24, 87);
+            this.labelControl2.Location = new System.Drawing.Point(37, 511);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(90, 24);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Stok Kodu";
+            this.labelControl2.Visible = false;
             // 
             // txtStokKodu
             // 
-            this.txtStokKodu.Location = new System.Drawing.Point(295, 91);
+            this.txtStokKodu.Location = new System.Drawing.Point(308, 515);
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Size = new System.Drawing.Size(125, 22);
             this.txtStokKodu.TabIndex = 4;
+            this.txtStokKodu.Visible = false;
             // 
             // btnKaydet
             // 
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(90, 560);
+            this.btnKaydet.Location = new System.Drawing.Point(102, 421);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(162, 35);
@@ -305,7 +309,7 @@
             // btnSil
             // 
             this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.Location = new System.Drawing.Point(367, 560);
+            this.btnSil.Location = new System.Drawing.Point(350, 421);
             this.btnSil.Name = "btnSil";
             this.btnSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnSil.Size = new System.Drawing.Size(165, 35);
@@ -317,11 +321,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 628);
+            this.ClientSize = new System.Drawing.Size(646, 498);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.txtMusteriKodu);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txtStokKodu);
+            this.Controls.Add(this.labelControl6);
+            this.Controls.Add(this.txtKalemId);
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FrmUretimSonuKayitlari";
@@ -345,6 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

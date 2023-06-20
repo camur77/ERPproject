@@ -172,6 +172,7 @@
             // 
             this.groupBox4.Controls.Add(this.rbtnTamamlanmis);
             this.groupBox4.Controls.Add(this.rbtnYeni);
+            this.groupBox4.Enabled = false;
             this.groupBox4.Location = new System.Drawing.Point(414, 290);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(282, 61);
@@ -254,6 +255,7 @@
             // 
             // txtMiktar
             // 
+            this.txtMiktar.Enabled = false;
             this.txtMiktar.Location = new System.Drawing.Point(571, 168);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(125, 22);
@@ -393,6 +395,7 @@
             this.sbtnIsEmriListesi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnIsEmriListesi.Size = new System.Drawing.Size(37, 35);
             this.sbtnIsEmriListesi.TabIndex = 3;
+            this.sbtnIsEmriListesi.Visible = false;
             this.sbtnIsEmriListesi.Click += new System.EventHandler(this.sbtnIsEmriListesi_Click);
             // 
             // txtIsEmriNumarasi

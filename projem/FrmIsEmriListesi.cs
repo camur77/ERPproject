@@ -79,50 +79,50 @@ namespace projem
 
         private void txtIsEmriNumarasi_TextChanged(object sender, EventArgs e)
         {
-            if (isemrino == "uretimsonukayit")
+           /* if (isemrino == "uretimsonukayit")
             {
                 arama2();
             }
             else
             {
                 arama();
-            }
+            }*/
         }
 
         private void txtStokKodu_TextChanged(object sender, EventArgs e)
         {
-            if (isemrino == "uretimsonukayit")
+           /* if (isemrino == "uretimsonukayit")
             {
                 arama2();
             }
             else
             {
                 arama();
-            }
+            }*/
         }
 
         private void txtSiparisNumarasi_TextChanged(object sender, EventArgs e)
         {
-            if (isemrino == "uretimsonukayit")
+            /*if (isemrino == "uretimsonukayit")
             {
                 arama2();
             }
             else
             {
                 arama();
-            }
+            }*/
         }
 
         private void txtStokAdi_TextChanged(object sender, EventArgs e)
         {
-            if (isemrino == "uretimsonukayit")
+            /*if (isemrino == "uretimsonukayit")
             {
                 arama2();
             }
             else
             {
                 arama();
-            }
+            }*/
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)

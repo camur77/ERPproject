@@ -68,7 +68,7 @@
             // Si
             // 
             this.Si.Controls.Add(this.gridControl1);
-            this.Si.Location = new System.Drawing.Point(9, 126);
+            this.Si.Location = new System.Drawing.Point(9, 15);
             this.Si.Margin = new System.Windows.Forms.Padding(6);
             this.Si.Name = "Si";
             this.Si.Padding = new System.Windows.Forms.Padding(6);
@@ -83,14 +83,15 @@
             this.groupBox1.Controls.Add(this.txtSiparisNumarasi);
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Controls.Add(this.txtMusteriAdi);
-            this.groupBox1.Location = new System.Drawing.Point(9, 15);
+            this.groupBox1.Location = new System.Drawing.Point(852, 104);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(853, 99);
+            this.groupBox1.Size = new System.Drawing.Size(10, 10);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sipariş Bilgileri";
+            this.groupBox1.Visible = false;
             // 
             // labelControl1
             // 
@@ -136,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 500);
+            this.ClientSize = new System.Drawing.Size(880, 395);
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

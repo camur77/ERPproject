@@ -60,7 +60,7 @@
             this.groupBox1.Size = new System.Drawing.Size(349, 149);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Grup Kodu Bilgileri";
+            this.groupBox1.Text = "Yeni Grup Ekle";
             // 
             // SbtnSil
             // 

@@ -196,8 +196,22 @@ namespace projem
             frm.Show();
         }
 
+        string c1 = "";
+        void uretimsonukaydinumarasihesaplama()
+        {
+            conn.Open();
+            SqlCommand sorgu1 = new SqlCommand("SELECT TOP 1 CONCAT('S',REPLICATE('0',10-(LEN(SUBSTRING(SIPARIS_NO,2,9)+1)+1)),SUBSTRING(SIPARIS_NO,2,9)+1) FROM TBL_SIPARISLER ORDER BY SIPARIS_NO DESC", conn);
+            SqlDataReader dr1 = sorgu1.ExecuteReader();
+            while (dr1.Read())
+            {
+                c1 = dr1[0].ToString();
+            }
+            conn.Close();
+        }
         private void FrmSiparisler_Load(object sender, EventArgs e)
         {
+            uretimsonukaydinumarasihesaplama();
+            txtSiparisNumarasi.Text = c1;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             txtStokAdı.Enabled = false;
@@ -274,81 +288,113 @@ namespace projem
 
         private void sbtnKaydet_Click(object sender, EventArgs e)
         {
-            if(sipkalem == "")
+            if(txtStokKodu.Text == "")
             {
-                //EKLEME
-                conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("insert into TBL_SIPARISKALEMLERI (SIPARIS_NO, STOK_KODU,STOK_ADI, MIKTAR, URUN_ACIKLAMASI, FIYAT, KDV, URETIMDURUMU) VALUES ('"+txtSiparisNumarasi.Text+"','"+txtStokKodu.Text+"','"+txtStokAdı.Text+"','"+txtMiktar.Text.Replace(',','.')+"','"+txtUrunAcıklaması.Text+"','"+txtFiyat.Text.Replace(',','.')+"','"+txtKDV.Text.Replace(',','.')+"','K')",conn);
-                sorgu1.ExecuteNonQuery();
-                conn.Close();
-                temizle1();
-                siparisbilgisicekme2();
-                geneltoplamhesaplama();
+
             }
             else
             {
-                //GÜNCELLEME
-                conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISKALEMLERI SET MIKTAR = '"+txtMiktar.Text.Replace(',','.')+"',URUN_ACIKLAMASI = '"+txtUrunAcıklaması.Text+"', FIYAT = '"+txtFiyat.Text.Replace(',','.')+"' , KDV= '"+txtKDV.Text.Replace(',','.')+"' where SIPKALEM_ID = '"+sipkalem+"'",conn);
-                sorgu1.ExecuteNonQuery();
-                temizle1();
-                txtStokKodu.Enabled = true;
-                conn.Close();
-                siparisbilgisicekme2();
-                geneltoplamhesaplama();
+                if (sipkalem == "")
+                {
+                    //EKLEME
+                    conn.Open();
+                    SqlCommand sorgu1 = new SqlCommand("insert into TBL_SIPARISKALEMLERI (SIPARIS_NO, STOK_KODU,STOK_ADI, MIKTAR, URUN_ACIKLAMASI, FIYAT, KDV, URETIMDURUMU) VALUES ('" + txtSiparisNumarasi.Text + "','" + txtStokKodu.Text + "','" + txtStokAdı.Text + "','" + txtMiktar.Text.Replace(',', '.') + "','" + txtUrunAcıklaması.Text + "','" + txtFiyat.Text.Replace(',', '.') + "','" + txtKDV.Text.Replace(',', '.') + "','K')", conn);
+                    sorgu1.ExecuteNonQuery();
+                    conn.Close();
+                    temizle1();
+                    siparisbilgisicekme2();
+                    geneltoplamhesaplama();
+                }
+                else
+                {
+                    sipkalemisemrikontrol();
+                    //GÜNCELLEME
+                    if (x5 == "K")
+                    {
+                        conn.Open();
+                        SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISKALEMLERI SET MIKTAR = '" + txtMiktar.Text.Replace(',', '.') + "',URUN_ACIKLAMASI = '" + txtUrunAcıklaması.Text + "', FIYAT = '" + txtFiyat.Text.Replace(',', '.') + "' , KDV= '" + txtKDV.Text.Replace(',', '.') + "' where SIPKALEM_ID = '" + sipkalem + "'", conn);
+                        sorgu1.ExecuteNonQuery();
+                        temizle1();
+                        txtStokKodu.Enabled = true;
+                        conn.Close();
+                        siparisbilgisicekme2();
+                        geneltoplamhesaplama();
+                        sipkalem = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu Siparişe Ait İş Emri Kaydı Bulunmaktadır.");
+                        temizle1();
+                        gridControl1.DataSource = "";
+                    }
+                }
+                //siparisx = "";
+                //temizle1();
+                sipariskontrol();
+                if (Convert.ToInt16(x1) == 1)
+                {
+                    conn.Open();
+                    SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISLER SET SIPARIS_TARIHI = '" + txtSiparisTarihi.Text + "', TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', TOPLAM_TUTAR = '" + txtToplamTutar.Text.Replace(',', '.') + "' where SIPARIS_NO = '" + txtSiparisNumarasi.Text + "'", conn);
+                    sorgu1.ExecuteNonQuery();
+                    conn.Close();
+                }
+                else
+                {
+                    conn.Open();
+                    SqlCommand sorgu1 = new SqlCommand("insert into TBL_SIPARISLER (SIPARIS_NO, MUSTERI_KODU, SIPARIS_TARIHI, TESLIM_TARIHI,TOPLAM_TUTAR) VALUES ('" + txtSiparisNumarasi.Text + "','" + txtMusteriKodu.Text + "','" + txtSiparisTarihi.Text + "','" + txtTeslimTarihi.Text + "','" + txtToplamTutar.Text.Replace(',', '.') + "')", conn);
+                    sorgu1.ExecuteNonQuery();
+                    conn.Close();
+                }
             }
-            //siparisx = "";
-            //temizle1();
-            sipariskontrol();
-            if(Convert.ToInt16(x1) == 1)
-            {
-                conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISLER SET SIPARIS_TARIHI = '"+txtSiparisTarihi.Text+"', TESLIM_TARIHI = '"+txtTeslimTarihi.Text+"', TOPLAM_TUTAR = '"+txtToplamTutar.Text.Replace(',','.')+"' where SIPARIS_NO = '"+txtSiparisNumarasi.Text+"'",conn);
-                sorgu1.ExecuteNonQuery();
-                conn.Close();
-            }
-            else
-            {
-                conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("insert into TBL_SIPARISLER (SIPARIS_NO, MUSTERI_KODU, SIPARIS_TARIHI, TESLIM_TARIHI,TOPLAM_TUTAR) VALUES ('"+txtSiparisNumarasi.Text+"','"+txtMusteriKodu.Text+"','"+txtSiparisTarihi.Text+"','"+txtTeslimTarihi.Text+"','"+txtToplamTutar.Text.Replace(',','.')+"')",conn);
-                sorgu1.ExecuteNonQuery();
-                conn.Close();
-            }
+            //uretimsonukaydinumarasihesaplama();
+           // txtSiparisNumarasi.Text = c1;
 
         }
 
         private void sbtnSil_Click(object sender, EventArgs e)
         {
-            sipkalemisemrikontrol();
-            if(x5 == "K")
+            if(txtStokKodu.Text == "")
             {
-                conn.Open();
-                SqlCommand sorgu = new SqlCommand("delete TBL_SIPARISKALEMLERI WHERE SIPKALEM_ID = '" + sipkalem + "'", conn);
-                sorgu.ExecuteNonQuery();
-                conn.Close();
-                temizle1();
-                siparisbilgisicekme2();
-                sipkalem = "";
-                txtStokKodu.Enabled = true;
-                kalemsayma();
-                if(Convert.ToInt16(x4) == 0)
-                {
-                    txtToplamTutar.Text = "0,00";
-                }
-                else
-                {
-                    geneltoplamhesaplama();
-                }
-                //geneltoplamhesaplama();
-                conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISLER SET SIPARIS_TARIHI = '" + txtSiparisTarihi.Text + "', TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', TOPLAM_TUTAR = '" + txtToplamTutar.Text.Replace(',', '.') + "' where SIPARIS_NO = '" + txtSiparisNumarasi.Text + "'", conn);
-                sorgu1.ExecuteNonQuery();
-                conn.Close();
+
             }
             else
             {
-                MessageBox.Show("Bu Siparişe Ait İş Emri Kaydı Bulunmaktadır.");
+                sipkalemisemrikontrol();
+                if (x5 == "K")
+                {
+                    conn.Open();
+                    SqlCommand sorgu = new SqlCommand("delete TBL_SIPARISKALEMLERI WHERE SIPKALEM_ID = '" + sipkalem + "'", conn);
+                    sorgu.ExecuteNonQuery();
+                    conn.Close();
+                    temizle1();
+                    siparisbilgisicekme2();
+                    sipkalem = "";
+                    txtStokKodu.Enabled = true;
+                    kalemsayma();
+                    if (Convert.ToInt16(x4) == 0)
+                    {
+                        txtToplamTutar.Text = "0,00";
+                    }
+                    else
+                    {
+                        geneltoplamhesaplama();
+                    }
+                    //geneltoplamhesaplama();
+                    conn.Open();
+                    SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISLER SET SIPARIS_TARIHI = '" + txtSiparisTarihi.Text + "', TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', TOPLAM_TUTAR = '" + txtToplamTutar.Text.Replace(',', '.') + "' where SIPARIS_NO = '" + txtSiparisNumarasi.Text + "'", conn);
+                    sorgu1.ExecuteNonQuery();
+                    conn.Close();
+                    sipkalem = "";
+                    temizle1();
+                    //gridControl1.DataSource = "";
+                }
+                else
+                {
+                    MessageBox.Show("Bu Siparişe Ait İş Emri Kaydı Bulunmaktadır.");
+                }
             }
+            uretimsonukaydinumarasihesaplama();
+            txtSiparisNumarasi.Text = c1;
 
 
         }
@@ -386,6 +432,7 @@ namespace projem
                 temizle2();
                 txtSiparisNumarasi.Text = "";
                 siparisbilgisicekme2();
+                uretimsonukaydinumarasihesaplama();
             }
             else
             {
@@ -403,18 +450,22 @@ namespace projem
                 SqlCommand sorgu1 = new SqlCommand("update TBL_SIPARISLER SET SIPARIS_TARIHI = '" + txtSiparisTarihi.Text + "', TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', TOPLAM_TUTAR = '" + txtToplamTutar.Text.Replace(',', '.') + "' where SIPARIS_NO = '" + txtSiparisNumarasi.Text + "'", conn);
                 sorgu1.ExecuteNonQuery();
                 conn.Close();
+                uretimsonukaydinumarasihesaplama();
             }
             else
             {
                 conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("insert into TBL_SIPARISLER (SIPARIS_NO, MUSTERI_KODU, SIPARIS_TARIHI, TESLIM_TARIHI,TOPLAM_TUTAR) VALUES ('" + txtSiparisNumarasi.Text + "','" + txtMusteriKodu.Text + "','" + txtSiparisTarihi.Text + "','" + txtTeslimTarihi.Text + "','" + txtToplamTutar.Text.Replace(',', '.') + "')", conn);
+                SqlCommand sorgu1 = new SqlCommand("insert into TBL_SIPARISLER (SIPARIS_NO, MUSTERI_KODU, SIPARIS_TARIHI, TESLIM_TARIHI,TOPLAM_TUTAR) VALUES ('" + txtSiparisNumarasi.Text + "','" + txtMusteriKodu.Text + "','" + txtSiparisTarihi.Text + "','" + txtTeslimTarihi.Text + "',NULL)", conn);
                 sorgu1.ExecuteNonQuery();
                 conn.Close();
+                uretimsonukaydinumarasihesaplama();
             }
             siparisbilgisicekme();
             temizle2();
             txtSiparisNumarasi.Text = "";
             siparisbilgisicekme2();
+            uretimsonukaydinumarasihesaplama();
+            txtSiparisNumarasi.Text = c1;
         }
 
         private void sbtnGrupKodListesi_Click(object sender, EventArgs e)
@@ -495,6 +546,24 @@ namespace projem
                 sbtnKaydet.PerformClick();
              
             }
+        }
+
+        private void sbtnSiparisTemizle_Click(object sender, EventArgs e)
+        {
+            temizle1();
+            temizle2();
+            uretimsonukaydinumarasihesaplama();
+            txtSiparisNumarasi.Text = c1;
+        }
+
+        private void sbtnSiparisTemizle_Click_1(object sender, EventArgs e)
+        {
+            temizle1();
+            temizle2();
+            uretimsonukaydinumarasihesaplama();
+            txtSiparisNumarasi.Text = c1;
+            gridControl1.DataSource = "";
+            txtMusteriAdi.Text = "";
         }
     }
 }

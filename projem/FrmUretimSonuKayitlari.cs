@@ -119,6 +119,19 @@ namespace projem
             txtIsEmriNumarasi.Enabled = true;
             sbtnİsEmriListesi.Enabled = true;
         }
+
+        string y1 = "";
+        void uretimsonukaydinumarasihesaplama()
+        {
+            conn.Open();
+            SqlCommand sorgu1 = new SqlCommand("SELECT TOP 1 CONCAT('U',REPLICATE('0',10-(LEN(SUBSTRING(URETIMSONUKAYDI_NUMARASI,2,9)+1)+1)),SUBSTRING(URETIMSONUKAYDI_NUMARASI,2,9)+1) FROM TBL_URETIMSONUKAYITLARI ORDER BY URETIMSONUKAYDI_NUMARASI DESC", conn);
+            SqlDataReader dr1 = sorgu1.ExecuteReader();
+            while (dr1.Read())
+            {
+                y1 = dr1[0].ToString();
+            }
+            conn.Close();
+        }
         void stokhareketkaydigirisi()
         {
             conn.Open();
@@ -143,6 +156,8 @@ namespace projem
         private void FrmUretimSonuKayitlari_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            uretimsonukaydinumarasihesaplama();
+            txtFisNo.Text = y1;
         }
 
         private void txtIsEmriNumarasi_Leave(object sender, EventArgs e)
@@ -157,13 +172,20 @@ namespace projem
                 if(Convert.ToInt16(x2)== 1)
                 {
                     isemribilgisicekme();
+                    txtSiparisNumarasi.Enabled = false;
+                    txtStokAdi.Enabled = false;
+                    txtMusteriAdi.Enabled = false;
+                    txtMiktar.Enabled = false;
                 }
                 else
                 {
                     MessageBox.Show("Girilen İş Emri Numarasına Ait Bir Kayıt Bulunamamaktadır.");
                     txtIsEmriNumarasi.Focus();
+
                 }
             }
+            
+
         }
 
         private void txtFisNo_Leave(object sender, EventArgs e)
@@ -216,6 +238,12 @@ namespace projem
                     txtFisNo.Text = "";
                 }
             }
+            uretimsonukaydinumarasihesaplama();
+            txtFisNo.Text = y1;
+            conn.Open();
+            SqlCommand sorgu16 = new SqlCommand(" update TBL_STOKPARCALARI set STOK_MIKTARI = STOK_MIKTARI - 1", conn);
+            sorgu16.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -245,6 +273,8 @@ namespace projem
                     MessageBox.Show("Mevcut Uretim Sonu Kaydı Bulunamamaktadır.");
                 }
             }
+            uretimsonukaydinumarasihesaplama();
+            txtFisNo.Text = y1;
         }
 
         private void sbtnİsEmriListesi_Click(object sender, EventArgs e)
@@ -279,7 +309,9 @@ namespace projem
         private void sbtnSiparisTemizle_Click(object sender, EventArgs e)
         {
             temizle();
-            txtFisNo.Text = "";
+            
+            uretimsonukaydinumarasihesaplama();
+            txtFisNo.Text = y1;
         }
 
         private void FrmUretimSonuKayitlari_KeyDown(object sender, KeyEventArgs e)

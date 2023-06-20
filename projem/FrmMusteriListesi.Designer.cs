@@ -58,7 +58,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(6);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(777, 237);
+            this.gridControl1.Size = new System.Drawing.Size(780, 252);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -75,11 +75,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(447, 30);
+            this.groupBox2.Location = new System.Drawing.Point(15, 15);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(789, 272);
+            this.groupBox2.Size = new System.Drawing.Size(792, 287);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Müşteri Listesi";
@@ -94,14 +94,15 @@
             this.groupBox1.Controls.Add(this.txtIl);
             this.groupBox1.Controls.Add(this.txtMusteriAdi);
             this.groupBox1.Controls.Add(this.labelControl3);
-            this.groupBox1.Location = new System.Drawing.Point(14, 30);
+            this.groupBox1.Location = new System.Drawing.Point(797, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(421, 201);
+            this.groupBox1.Size = new System.Drawing.Size(10, 10);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Müşteri Bilgileri";
+            this.groupBox1.Visible = false;
             // 
             // txtIlce
             // 
@@ -188,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 317);
+            this.ClientSize = new System.Drawing.Size(827, 317);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

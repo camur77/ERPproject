@@ -20,6 +20,9 @@ namespace projem
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            FrmGenelRapor frmGenelRapor = new FrmGenelRapor();
+            frmGenelRapor.MdiParent = this;
+            frmGenelRapor.Show();
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

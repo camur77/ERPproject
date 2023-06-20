@@ -70,12 +70,13 @@
             this.groupBox1.Controls.Add(this.txtFisNo);
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Controls.Add(this.txtİsEmriNumarasi);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(1033, 144);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1031, 142);
+            this.groupBox1.Size = new System.Drawing.Size(10, 10);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üretim Sonu Kaydı Bilgileri";
+            this.groupBox1.Visible = false;
             // 
             // labelControl5
             // 
@@ -188,7 +189,7 @@
             // Si
             // 
             this.Si.Controls.Add(this.gridControl1);
-            this.Si.Location = new System.Drawing.Point(15, 163);
+            this.Si.Location = new System.Drawing.Point(6, 15);
             this.Si.Margin = new System.Windows.Forms.Padding(6);
             this.Si.Name = "Si";
             this.Si.Padding = new System.Windows.Forms.Padding(6);
@@ -223,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 535);
+            this.ClientSize = new System.Drawing.Size(1044, 378);
             this.Controls.Add(this.Si);
             this.Controls.Add(this.groupBox1);
             this.KeyPreview = true;

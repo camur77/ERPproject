@@ -106,7 +106,7 @@
             this.groupControl2.Controls.Add(this.gridControlişemrigereken);
             this.groupControl2.Location = new System.Drawing.Point(1029, 334);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(489, 268);
+            this.groupControl2.Size = new System.Drawing.Size(489, 281);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "İş Emri Verilmesi Gereken Siparişler";
             // 
@@ -116,7 +116,7 @@
             this.gridControlişemrigereken.Location = new System.Drawing.Point(2, 33);
             this.gridControlişemrigereken.MainView = this.gridViewişemrigereken;
             this.gridControlişemrigereken.Name = "gridControlişemrigereken";
-            this.gridControlişemrigereken.Size = new System.Drawing.Size(485, 233);
+            this.gridControlişemrigereken.Size = new System.Drawing.Size(485, 246);
             this.gridControlişemrigereken.TabIndex = 1;
             this.gridControlişemrigereken.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewişemrigereken});
@@ -160,7 +160,7 @@
             this.groupControl4.Controls.Add(this.gridControlurunsatis);
             this.groupControl4.Location = new System.Drawing.Point(643, 334);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(366, 268);
+            this.groupControl4.Size = new System.Drawing.Size(366, 281);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Ürün Satış Raporu";
             // 
@@ -170,7 +170,7 @@
             this.gridControlurunsatis.Location = new System.Drawing.Point(2, 33);
             this.gridControlurunsatis.MainView = this.gridViewurunsatis;
             this.gridControlurunsatis.Name = "gridControlurunsatis";
-            this.gridControlurunsatis.Size = new System.Drawing.Size(362, 233);
+            this.gridControlurunsatis.Size = new System.Drawing.Size(362, 246);
             this.gridControlurunsatis.TabIndex = 1;
             this.gridControlurunsatis.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewurunsatis});
@@ -187,7 +187,7 @@
             this.groupControl5.Controls.Add(this.gridControlmustericiro);
             this.groupControl5.Location = new System.Drawing.Point(286, 334);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(339, 268);
+            this.groupControl5.Size = new System.Drawing.Size(339, 281);
             this.groupControl5.TabIndex = 4;
             this.groupControl5.Text = "Müşteri Ciro Raporu";
             // 
@@ -197,7 +197,7 @@
             this.gridControlmustericiro.Location = new System.Drawing.Point(2, 33);
             this.gridControlmustericiro.MainView = this.gridViewmustericiro;
             this.gridControlmustericiro.Name = "gridControlmustericiro";
-            this.gridControlmustericiro.Size = new System.Drawing.Size(335, 233);
+            this.gridControlmustericiro.Size = new System.Drawing.Size(335, 246);
             this.gridControlmustericiro.TabIndex = 1;
             this.gridControlmustericiro.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewmustericiro});
@@ -214,7 +214,7 @@
             this.groupControl3.Controls.Add(this.gridControlparcastokları);
             this.groupControl3.Location = new System.Drawing.Point(12, 334);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(259, 266);
+            this.groupControl3.Size = new System.Drawing.Size(259, 279);
             this.groupControl3.TabIndex = 10;
             this.groupControl3.Text = "Parça Stokları";
             // 
@@ -224,7 +224,7 @@
             this.gridControlparcastokları.Location = new System.Drawing.Point(2, 33);
             this.gridControlparcastokları.MainView = this.gridViewparcastokları;
             this.gridControlparcastokları.Name = "gridControlparcastokları";
-            this.gridControlparcastokları.Size = new System.Drawing.Size(255, 231);
+            this.gridControlparcastokları.Size = new System.Drawing.Size(255, 244);
             this.gridControlparcastokları.TabIndex = 1;
             this.gridControlparcastokları.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewparcastokları});

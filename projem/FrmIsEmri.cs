@@ -215,13 +215,29 @@ namespace projem
 
             conn.Close();
         }
+
+        string c1 = "";
+        void uretimsonukaydinumarasihesaplama()
+        {
+            conn.Open();
+            SqlCommand sorgu1 = new SqlCommand("SELECT TOP 1 CONCAT('I',REPLICATE('0',9-(LEN(SUBSTRING(ISEMRI_NUMARASI,2,9)+1)+1)),SUBSTRING(ISEMRI_NUMARASI,2,9)+1) FROM TBL_ISEMRI ORDER BY ISEMRI_NUMARASI DESC", conn);
+            SqlDataReader dr1 = sorgu1.ExecuteReader();
+            while (dr1.Read())
+            {
+                c1 = dr1[0].ToString();
+            }
+            conn.Close();
+        }
         private void FrmIsEmri_Load(object sender, EventArgs e)
         {
+            uretimsonukaydinumarasihesaplama();
+            txtIsEmriNumarasi.Text = c1;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             gridView1.OptionsBehavior.Editable = false;
             isemrilistesicekme();
             calisanlisteleme();
             atolyelisteleme();
+            txtMiktar.Enabled = false;
         }
 
         private void txtIsEmriNumarasi_Leave(object sender, EventArgs e)
@@ -251,78 +267,105 @@ namespace projem
 
         private void sbtnKaydet_Click(object sender, EventArgs e)
         {
-            isemrikontrol();
-            if(Convert.ToInt16(x1) == 1)
+            if(rbtnTamamlanmis.Checked == true)
             {
-                if(rbtnYeni.Checked == true)
-                {
-                    conn.Open();
-                    SqlCommand sorgu1 = new SqlCommand("UPDATE TBL_ISEMRI SET ISEMRI_ACIKLAMASI = '"+txtİsEmriAciklamasi.Text+"', ISEMRI_TARIHI = '"+txtİsEmriTarihi.Text+"' , TESLIM_TARIHI = '"+txtTeslimTarihi.Text+"', DURUM = 'Y' WHERE ISEMRI_NUMARASI = '"+txtIsEmriNumarasi.Text+"'", conn);
-                    sorgu1.ExecuteNonQuery();
-                    conn.Close();
-                    sipariskaleminiacma();
-                    temizle();
-                    txtIsEmriNumarasi.Text = "";
-                    isemrilistesicekme();
-                }
-                else
-                {
-                    conn.Open();
-                    SqlCommand sorgu1 = new SqlCommand("UPDATE TBL_ISEMRI SET ISEMRI_ACIKLAMASI = '" + txtİsEmriAciklamasi.Text + "', ISEMRI_TARIHI = '" + txtİsEmriTarihi.Text + "' , TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', DURUM = 'E' WHERE ISEMRI_NUMARASI = '" + txtIsEmriNumarasi.Text + "'", conn);
-                    sorgu1.ExecuteNonQuery();
-                    conn.Close();
-                    sipariskaleminibitirme();
-                    temizle();
-                    txtIsEmriNumarasi.Text = "";
-                    isemrilistesicekme();
-
-                }
+                MessageBox.Show("Bu İş Emrine Ait Üretim Sonu Kaydı Vardır Kayıt Üzerinde Güncelleme İşlemi Yapılamaz!!");
             }
             else
             {
-                if(rbtnYeni.Checked == true)
+                isemrikontrol();
+                if (Convert.ToInt16(x1) == 1)
                 {
-                    conn.Open();
-                    SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_ISEMRI (ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,ISEMRI_ACIKLAMASI,ISEMRI_TARIHI,TESLIM_TARIHI,SIPARIS_NO,MIKTAR,SIPKALEM_ID,DURUM) VALUES ('"+txtIsEmriNumarasi.Text+"','"+txtStokKodu.Text+"','"+txtStokAdi.Text+"','"+txtİsEmriAciklamasi.Text+"','"+txtİsEmriTarihi.Text+"','"+txtTeslimTarihi.Text+"','"+txtSiparisNumarasi.Text+"','"+txtMiktar.Text.Replace(',','.')+"','"+txtSiparisKalemID.Text+"','Y')", conn);
-                    sorgu1.ExecuteNonQuery();
-                    conn.Close();
-                    sipariskaleminiacma();
-                    temizle();
-                    txtIsEmriNumarasi.Text = "";
-                    isemrilistesicekme();
+                    if (rbtnYeni.Checked == true)
+                    {
+                        conn.Open();
+                        SqlCommand sorgu1 = new SqlCommand("UPDATE TBL_ISEMRI SET ISEMRI_ACIKLAMASI = '" + txtİsEmriAciklamasi.Text + "', ISEMRI_TARIHI = '" + txtİsEmriTarihi.Text + "' , TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', DURUM = 'Y' WHERE ISEMRI_NUMARASI = '" + txtIsEmriNumarasi.Text + "'", conn);
+                        sorgu1.ExecuteNonQuery();
+                        conn.Close();
+                        sipariskaleminiacma();
+                        temizle();
+                        txtIsEmriNumarasi.Text = "";
+                        isemrilistesicekme();
+                        uretimsonukaydinumarasihesaplama();
+                    }
+                    else
+                    {
+                        conn.Open();
+                        SqlCommand sorgu1 = new SqlCommand("UPDATE TBL_ISEMRI SET ISEMRI_ACIKLAMASI = '" + txtİsEmriAciklamasi.Text + "', ISEMRI_TARIHI = '" + txtİsEmriTarihi.Text + "' , TESLIM_TARIHI = '" + txtTeslimTarihi.Text + "', DURUM = 'E' WHERE ISEMRI_NUMARASI = '" + txtIsEmriNumarasi.Text + "'", conn);
+                        sorgu1.ExecuteNonQuery();
+                        conn.Close();
+                        sipariskaleminibitirme();
+                        temizle();
+                        txtIsEmriNumarasi.Text = "";
+                        isemrilistesicekme();
+                        uretimsonukaydinumarasihesaplama();
+
+                    }
                 }
                 else
                 {
-                    conn.Open();
-                    SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_ISEMRI (ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,ISEMRI_ACIKLAMASI,ISEMRI_TARIHI,TESLIM_TARIHI,SIPARIS_NO,MIKTAR,SIPKALEM_ID,DURUM) VALUES ('" + txtIsEmriNumarasi.Text + "','" + txtStokKodu.Text + "','" + txtStokAdi.Text + "','" + txtİsEmriAciklamasi.Text + "','" + txtİsEmriTarihi.Text + "','" + txtTeslimTarihi.Text + "','" + txtSiparisNumarasi.Text + "','" + txtMiktar.Text.Replace(',', '.') + "','" + txtSiparisKalemID.Text + "','E')", conn);
-                    sorgu1.ExecuteNonQuery();
-                    conn.Close();
-                    sipariskaleminibitirme();
-                    temizle();
-                    txtIsEmriNumarasi.Text = "";
-                    isemrilistesicekme();
+                    if (rbtnYeni.Checked == true)
+                    {
+                        conn.Open();
+                        SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_ISEMRI (ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,ISEMRI_ACIKLAMASI,ISEMRI_TARIHI,TESLIM_TARIHI,SIPARIS_NO,MIKTAR,SIPKALEM_ID,DURUM) VALUES ('" + txtIsEmriNumarasi.Text + "','" + txtStokKodu.Text + "','" + txtStokAdi.Text + "','" + txtİsEmriAciklamasi.Text + "','" + txtİsEmriTarihi.Text + "','" + txtTeslimTarihi.Text + "','" + txtSiparisNumarasi.Text + "','" + txtMiktar.Text.Replace(',', '.') + "','" + txtSiparisKalemID.Text + "','Y')", conn);
+                        sorgu1.ExecuteNonQuery();
+                        conn.Close();
+                        sipariskaleminiacma();
+                        temizle();
+                        txtIsEmriNumarasi.Text = "";
+                        isemrilistesicekme();
+                        uretimsonukaydinumarasihesaplama();
+                    }
+                    else
+                    {
+                        conn.Open();
+                        SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_ISEMRI (ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,ISEMRI_ACIKLAMASI,ISEMRI_TARIHI,TESLIM_TARIHI,SIPARIS_NO,MIKTAR,SIPKALEM_ID,DURUM) VALUES ('" + txtIsEmriNumarasi.Text + "','" + txtStokKodu.Text + "','" + txtStokAdi.Text + "','" + txtİsEmriAciklamasi.Text + "','" + txtİsEmriTarihi.Text + "','" + txtTeslimTarihi.Text + "','" + txtSiparisNumarasi.Text + "','" + txtMiktar.Text.Replace(',', '.') + "','" + txtSiparisKalemID.Text + "','E')", conn);
+                        sorgu1.ExecuteNonQuery();
+                        conn.Close();
+                        sipariskaleminibitirme();
+                        temizle();
+                        txtIsEmriNumarasi.Text = "";
+                        isemrilistesicekme();
+                        uretimsonukaydinumarasihesaplama();
+                    }
                 }
             }
+            uretimsonukaydinumarasihesaplama();
+            txtIsEmriNumarasi.Text = c1;
+            comboil.Text = "";
+            comboboxatolye.Text = "";
+            txtMiktar.Enabled = false;
         }
 
         private void sbtnSil_Click(object sender, EventArgs e)
         {
-            isemrikontrol();
-            if(Convert.ToInt16(x1) == 1)
+            if(rbtnTamamlanmis.Checked == true)
             {
-                conn.Open();
-                SqlCommand sorgu1 = new SqlCommand("DELETE TBL_ISEMRI WHERE ISEMRI_NUMARASI = '"+txtIsEmriNumarasi.Text+"'",conn);
-                sorgu1.ExecuteNonQuery();
-                conn.Close();
-                sipariskaleminikapatma();
-                temizle() ;
-                txtIsEmriNumarasi.Text = "";
-                isemrilistesicekme();
+                MessageBox.Show("Bu İş Emrine Ait Üretim Sonu Kaydı Vardır Silinemez!!");
             }
             else
             {
-                MessageBox.Show("Böyle Bir İş Emri Kaydı Yoktur.");
+                isemrikontrol();
+                if (Convert.ToInt16(x1) == 1)
+                {
+                    conn.Open();
+                    SqlCommand sorgu1 = new SqlCommand("DELETE TBL_ISEMRI WHERE ISEMRI_NUMARASI = '" + txtIsEmriNumarasi.Text + "'", conn);
+                    sorgu1.ExecuteNonQuery();
+                    conn.Close();
+                    sipariskaleminikapatma();
+                    temizle();
+                    txtIsEmriNumarasi.Text = "";
+                    isemrilistesicekme();
+                    uretimsonukaydinumarasihesaplama();
+                }
+                else
+                {
+                    MessageBox.Show("Böyle Bir İş Emri Kaydı Yoktur.");
+                }
             }
+            uretimsonukaydinumarasihesaplama();
+            txtIsEmriNumarasi.Text = c1;
+            txtMiktar.Enabled = false;
         }
 
         
@@ -389,8 +432,10 @@ namespace projem
         private void sbtnSiparisTemizle_Click(object sender, EventArgs e)
         {
             temizle();
-            txtIsEmriNumarasi.Text = "";
+            uretimsonukaydinumarasihesaplama();
+            txtIsEmriNumarasi.Text = c1;
             txtIsEmriNumarasi.Focus();
+            txtMiktar.Enabled = false;
         }
 
         private void sbtnStokListesi_Click(object sender, EventArgs e)

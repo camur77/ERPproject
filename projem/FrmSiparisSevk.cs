@@ -106,6 +106,7 @@ namespace projem
             siparislistesicekme();
             gridsiparislistesi.DataSource = "";
             gridsiparisicerik.DataSource = "";
+            MessageBox.Show("Siparişiniz Başarıyla Sevk Edildi!");
         }
 
         private void FrmSiparisSevk_KeyDown(object sender, KeyEventArgs e)
