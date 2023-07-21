@@ -15,7 +15,7 @@ namespace projem
     public partial class FrmUretimSonuKayitlari : Form
     {
         public static string fisx = "";
-        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=ERP;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=proje;Integrated Security=True");
         public FrmUretimSonuKayitlari()
         {
             InitializeComponent();
@@ -135,7 +135,7 @@ namespace projem
         void stokhareketkaydigirisi()
         {
             conn.Open();
-            SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_STOK_HAREKETLERI (URETIMSONUKAYDI_NUMARASI,ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,G_MIKTAR,C_MIKTAR,MUSTERI_ADI,ACIKLAMA) VALUES ('"+txtFisNo.Text+"','"+txtIsEmriNumarasi.Text+"','"+txtStokKodu.Text+"','"+txtStokAdi.Text+"','"+txtMiktar.Text.Replace(',','.')+"','0','"+txtMusteriAdi.Text+"','ÜRETİM')",conn);
+            SqlCommand sorgu1 = new SqlCommand("INSERT INTO TBL_STOKHAREKETLERI (URETIMSONUKAYDI_NUMARASI,ISEMRI_NUMARASI,STOK_KODU,STOK_ADI,G_MIKTAR,C_MIKTAR,MUSTERI_ADI,ACIKLAMA) VALUES ('"+txtFisNo.Text+"','"+txtIsEmriNumarasi.Text+"','"+txtStokKodu.Text+"','"+txtStokAdi.Text+"','"+txtMiktar.Text.Replace(',','.')+"','0','"+txtMusteriAdi.Text+"','ÜRETİM')",conn);
             sorgu1.ExecuteNonQuery();
             conn.Close();
         }

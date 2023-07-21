@@ -14,7 +14,7 @@ namespace projem
     public partial class FrmStokListesi : Form
     {
         public static string stokkodu;
-        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=ERP;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=proje;Integrated Security=True");
         public FrmStokListesi()
         {
             InitializeComponent();

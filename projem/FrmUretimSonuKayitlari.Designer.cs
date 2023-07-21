@@ -40,16 +40,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtMusteriAdi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMusteriKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtMiktar = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKalemId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtSiparisNumarasi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMusteriKodu = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtKalemId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokKodu = new DevExpress.XtraEditors.TextEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -59,11 +59,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIsEmriNumarasi.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMusteriAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMiktar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKalemId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKalemId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,25 +184,6 @@
             this.txtMusteriAdi.Size = new System.Drawing.Size(125, 22);
             this.txtMusteriAdi.TabIndex = 14;
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(229, 154);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(116, 24);
-            this.labelControl8.TabIndex = 11;
-            this.labelControl8.Text = "Müşteri Kodu";
-            this.labelControl8.Visible = false;
-            // 
-            // txtMusteriKodu
-            // 
-            this.txtMusteriKodu.Location = new System.Drawing.Point(500, 156);
-            this.txtMusteriKodu.Name = "txtMusteriKodu";
-            this.txtMusteriKodu.Size = new System.Drawing.Size(125, 22);
-            this.txtMusteriKodu.TabIndex = 12;
-            this.txtMusteriKodu.Visible = false;
-            // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -220,25 +201,6 @@
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(125, 22);
             this.txtMiktar.TabIndex = 10;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(37, 539);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(148, 24);
-            this.labelControl6.TabIndex = 7;
-            this.labelControl6.Text = "Sipariş Kalem ID";
-            this.labelControl6.Visible = false;
-            // 
-            // txtKalemId
-            // 
-            this.txtKalemId.Location = new System.Drawing.Point(308, 543);
-            this.txtKalemId.Name = "txtKalemId";
-            this.txtKalemId.Size = new System.Drawing.Size(125, 22);
-            this.txtKalemId.TabIndex = 8;
-            this.txtKalemId.Visible = false;
             // 
             // labelControl3
             // 
@@ -275,6 +237,44 @@
             this.txtSiparisNumarasi.Name = "txtSiparisNumarasi";
             this.txtSiparisNumarasi.Size = new System.Drawing.Size(125, 22);
             this.txtSiparisNumarasi.TabIndex = 2;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(229, 154);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(116, 24);
+            this.labelControl8.TabIndex = 11;
+            this.labelControl8.Text = "Müşteri Kodu";
+            this.labelControl8.Visible = false;
+            // 
+            // txtMusteriKodu
+            // 
+            this.txtMusteriKodu.Location = new System.Drawing.Point(500, 156);
+            this.txtMusteriKodu.Name = "txtMusteriKodu";
+            this.txtMusteriKodu.Size = new System.Drawing.Size(125, 22);
+            this.txtMusteriKodu.TabIndex = 12;
+            this.txtMusteriKodu.Visible = false;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(37, 539);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(148, 24);
+            this.labelControl6.TabIndex = 7;
+            this.labelControl6.Text = "Sipariş Kalem ID";
+            this.labelControl6.Visible = false;
+            // 
+            // txtKalemId
+            // 
+            this.txtKalemId.Location = new System.Drawing.Point(308, 543);
+            this.txtKalemId.Name = "txtKalemId";
+            this.txtKalemId.Size = new System.Drawing.Size(125, 22);
+            this.txtKalemId.TabIndex = 8;
+            this.txtKalemId.Visible = false;
             // 
             // labelControl2
             // 
@@ -348,11 +348,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMusteriAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMiktar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKalemId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSiparisNumarasi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKalemId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

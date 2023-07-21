@@ -13,7 +13,7 @@ namespace projem
 {
     public partial class FrmSiparisSevk : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=ERP;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=proje;Integrated Security=True");
         public FrmSiparisSevk()
         {
             InitializeComponent();

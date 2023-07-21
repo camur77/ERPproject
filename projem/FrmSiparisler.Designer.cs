@@ -437,7 +437,7 @@
             this.sbtnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.sbtnKaydet.Size = new System.Drawing.Size(105, 35);
             this.sbtnKaydet.TabIndex = 6;
-            this.sbtnKaydet.Text = "Kaydet";
+            this.sbtnKaydet.Text = "Ekle";
             this.sbtnKaydet.Click += new System.EventHandler(this.sbtnKaydet_Click);
             // 
             // labelControl8

@@ -14,7 +14,7 @@ namespace projem
     public partial class FrmStokHareketleri : Form
     {
         public static String stokhareketx;
-        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=ERP;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=proje;Integrated Security=True");
         public FrmStokHareketleri()
         {
             InitializeComponent();

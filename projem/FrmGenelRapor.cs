@@ -13,7 +13,7 @@ namespace projem
 {
     public partial class FrmGenelRapor : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=ERP;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=HALIL;Initial Catalog=proje;Integrated Security=True");
         public FrmGenelRapor()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace projem
         {
             conn.Open();
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT SK.STOK_KODU AS 'STOK KODU',SK.STOK_ADI AS 'STOK ADI', (SELECT ISNULL(SUM(MIKTAR),0) FROM TBL_SIPARISKALEMLERI SIP WHERE SIP.STOK_KODU = SK.STOK_KODU) AS 'SİPARİŞ MİKTARI',(SELECT ISNULL(SUM(MIKTAR),0) FROM TBL_ISEMRI MR WHERE MR.STOK_KODU = SK.STOK_KODU) AS 'İŞ EMRİ MİKTARI',(SELECT ISNULL(SUM(G_MIKTAR)-SUM(C_MIKTAR),0) FROM TBL_STOK_HAREKETLERI SH WHERE SH.STOK_KODU = SK.STOK_KODU) AS 'STOK MİKTARI' FROM TBL_STOKKAYITLARI SK", conn);
+            SqlCommand cmd = new SqlCommand("SELECT SK.STOK_KODU AS 'STOK KODU',SK.STOK_ADI AS 'STOK ADI', (SELECT ISNULL(SUM(MIKTAR),0) FROM TBL_SIPARISKALEMLERI SIP WHERE SIP.STOK_KODU = SK.STOK_KODU) AS 'SİPARİŞ MİKTARI',(SELECT ISNULL(SUM(MIKTAR),0) FROM TBL_ISEMRI MR WHERE MR.STOK_KODU = SK.STOK_KODU) AS 'İŞ EMRİ MİKTARI',(SELECT ISNULL(SUM(G_MIKTAR)-SUM(C_MIKTAR),0) FROM TBL_STOKHAREKETLERI SH WHERE SH.STOK_KODU = SK.STOK_KODU) AS 'STOK MİKTARI' FROM TBL_STOKKAYITLARI SK", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             gridControlstokkontrol.DataSource = dt;
